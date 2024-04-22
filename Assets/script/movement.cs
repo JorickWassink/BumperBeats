@@ -14,7 +14,7 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();// zet een rigidbody2d op je rb
     }
 
     // Update is called once per frame
@@ -27,6 +27,13 @@ public class movement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);// adds de force van vector2.up maal jumpfore met een forcemod2d wat een impulse is
             canJump = false;//zet canjump op false
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("level") && canJump == false)// checkt of collion iets raakt met de tag level en dat de bool can jump false is
+        {
+            canJump = true;//zet canjump op true
         }
     }
 }
