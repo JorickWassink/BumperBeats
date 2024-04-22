@@ -20,7 +20,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HorizontalInput = Input.GetAxis("Horizontal");// zet horizontalinput naat de axis van horizontal
+        HorizontalInput = Input.GetAxisRaw("Horizontal");// zet horizontalinput naat de axis van horizontal
 
         rb.velocity = new Vector2(HorizontalInput * Speed, rb.velocity.y);//zet de velocity van de rigidbody naar een nieuwe vector2 met input van horizontalinput maal sppen en de rigibody velocity Y waarde
         if (Input.GetKeyDown(KeyCode.Space) && canJump == true)// als de key space wordt ingedrukt en canjump is true
