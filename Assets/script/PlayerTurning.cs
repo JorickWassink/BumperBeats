@@ -20,7 +20,7 @@ public class PlayerTurning : MonoBehaviour
     {
         float rotate = Input.GetAxis("Horizontal"); //P#_rotate 
 
-        transform.Rotate(new Vector3(0, 0, 1) * rotate * Time.deltaTime * rotationSpeed);
+        transform.Rotate(new Vector3(0, 0, -1) * rotate * Time.deltaTime * rotationSpeed);
     }
 
     void FixedUpdate()
