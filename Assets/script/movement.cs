@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour
 {
+    [SerializeField] doors doors;
     [SerializeField] float jumpforce = 6.5f;// een float voor de jumpforce van mijn player / hoe hoog hij kan springen
     Rigidbody2D rb;// een rigidbody2d voor de player zodat hij niet in de lucht blijft hangen
     float Speed = 5f;// een float voor de snelheid van de player / hoe snel de speler kant lopen
@@ -38,10 +39,6 @@ public class movement : MonoBehaviour
         if (collision.CompareTag("level") && canJump == false)// checkt of collion iets raakt met de tag level en dat de bool can jump false is
         {
             canJump = true;//zet canjump op true
-        }
-        if (collision.CompareTag("door"))
-        {
-            SceneManager.LoadScene("leon2");
         }
     }
 }
