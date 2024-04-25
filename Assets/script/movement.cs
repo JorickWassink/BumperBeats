@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]//zorgt ervoor dat er een Rigidbody2d is omdat dat in deze script wordt gebruikt
 
@@ -37,6 +38,10 @@ public class movement : MonoBehaviour
         if (collision.CompareTag("level") && canJump == false)// checkt of collion iets raakt met de tag level en dat de bool can jump false is
         {
             canJump = true;//zet canjump op true
+        }
+        if (collision.CompareTag("door"))
+        {
+            SceneManager.LoadScene("leon2");
         }
     }
 }
