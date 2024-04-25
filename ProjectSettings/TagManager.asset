@@ -6,6 +6,7 @@ TagManager:
   tags:
   - level
   - door
+  - Bumper
   layers:
   - Default
   - TransparentFX

@@ -624,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1799000074355643802, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Bumper
       objectReference: {fileID: 0}
     - target: {fileID: 2306132738849581896, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
       propertyPath: m_IsTrigger
@@ -673,6 +673,14 @@ PrefabInstance:
     - target: {fileID: 5472830432333769320, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
       propertyPath: m_Name
       value: Gerard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943153069093370719, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943153069093370719, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

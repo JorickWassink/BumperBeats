@@ -4,7 +4,6 @@ public class MoveToPlayer : MonoBehaviour
 {
     [SerializeField] float force = 10;
     [SerializeField] Transform playerTarget;
-    bool hitPlayer = false;
     Rigidbody2D rb;
 
     void Start()
@@ -18,6 +17,11 @@ public class MoveToPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Bumper"))
+        {
+            rb.AddForce(playerTarget.position - transform.position * -200);
         }
     }
 }
