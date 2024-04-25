@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MoveToPlayer : MonoBehaviour
 {
+    EnemyThing enemyThing;
     [SerializeField] float force = 10;
     [SerializeField] Transform playerTarget;
     Rigidbody2D rb;
