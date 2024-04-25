@@ -6,21 +6,20 @@ using System;
 
 public class MathGame : MonoBehaviour
 {
-    [SerializeField] TMP_Text somText;
+    public TMP_Text somText;
     [SerializeField] TMP_Text aText;
     [SerializeField] TMP_Text bText;
     [SerializeField] TMP_Text cText;
     [SerializeField] TMP_Text dText;
-    private int[] firstNumbers = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50};
-    private int[] secondNumbers = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50};
     private char[] operators = { '+', '-', 'x' };
     public int firstNumber;
     int secondNumber;
     char op;
+    public int whichOne;
     void Start()
     {
-        firstNumber = firstNumbers[UnityEngine.Random.Range(0, firstNumbers.Length)];
-        secondNumber = secondNumbers[UnityEngine.Random.Range(0, secondNumbers.Length)];
+        firstNumber = UnityEngine.Random.Range(0,50);
+        secondNumber = UnityEngine.Random.Range(0, 50);
         op = operators[UnityEngine.Random.Range(0,operators.Length)];
         somText.text = Convert.ToString($"{firstNumber}   {op}   {secondNumber}");
         int answer = GetAnswer(firstNumber,secondNumber,op);
@@ -28,7 +27,8 @@ public class MathGame : MonoBehaviour
         bText.text = Convert.ToString(answer + UnityEngine.Random.Range(4, 15));
         cText.text = Convert.ToString(answer - UnityEngine.Random.Range(4, 15));
         dText.text = Convert.ToString(answer + UnityEngine.Random.Range(4, 15));
-        int whichOne = UnityEngine.Random.Range(1, 5);
+        print(answer);
+        whichOne = UnityEngine.Random.Range(1, 5);
         if (whichOne == 1)
         {
             aText.text = Convert.ToString(answer);
@@ -47,6 +47,9 @@ public class MathGame : MonoBehaviour
         }
     }
 
+
+
+
     private int GetAnswer(int firstNumberP, int secondNumberP , char pop)
     {
         int answer = 0;
@@ -58,7 +61,7 @@ public class MathGame : MonoBehaviour
         {
             answer = firstNumberP - secondNumberP;
         }
-        else if (pop == '*')
+        else if (pop == 'x')
         {
             answer = firstNumberP * secondNumberP;
         }
