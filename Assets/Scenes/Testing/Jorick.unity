@@ -227,6 +227,7 @@ MonoBehaviour:
   bullet: {fileID: 1840091742416419113, guid: aed53e5c3f48d3a489e711000553f5be, type: 3}
   bulletStart: {fileID: 1766621169}
   bulletEnd: {fileID: 1386903914}
+  canShoot: 1
 --- !u!120 &18813248
 LineRenderer:
   serializedVersion: 2
@@ -561,6 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c2b969f28edff478f90bc75d48cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coins: {fileID: 1038819035}
   index: 0
 --- !u!1 &315821155
 GameObject:
@@ -792,6 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c2b969f28edff478f90bc75d48cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coins: {fileID: 1038819035}
   index: 2
 --- !u!1 &632451811
 GameObject:
@@ -976,6 +979,7 @@ GameObject:
   - component: {fileID: 1038819032}
   - component: {fileID: 1038819031}
   - component: {fileID: 1038819034}
+  - component: {fileID: 1038819035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1075,6 +1079,21 @@ MonoBehaviour:
   cText: {fileID: 1965628891}
   dText: {fileID: 315821156}
   firstNumber: 0
+  whichOne: 0
+--- !u!114 &1038819035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038819030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f49e0df13547243aca1317cf66c530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinsText: {fileID: 0}
+  CoinsCount: 0
 --- !u!1 &1386903913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c2b969f28edff478f90bc75d48cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coins: {fileID: 1038819035}
   index: 3
 --- !u!1 &2108374297
 GameObject:
@@ -1704,6 +1724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c2b969f28edff478f90bc75d48cc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coins: {fileID: 1038819035}
   index: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

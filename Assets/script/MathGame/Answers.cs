@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Answers : MonoBehaviour
 {
+    [SerializeField] coins Coins;
     public int index;
     MathGame game;
     MathPlayer player;
@@ -24,7 +25,8 @@ public class Answers : MonoBehaviour
                 Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
-                player.canShoot = false;               
+                player.canShoot = false;
+                Coins.addcoin();
             }
             else
             {
@@ -42,7 +44,8 @@ public class Answers : MonoBehaviour
                 Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
-                player.canShoot = false;              
+                player.canShoot = false;
+                Coins.addcoin();
             }
             else
             {
@@ -60,7 +63,8 @@ public class Answers : MonoBehaviour
                 Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
-                player.canShoot = false;      
+                player.canShoot = false;
+                Coins.addcoin();
             }
             else
             {
@@ -79,7 +83,8 @@ public class Answers : MonoBehaviour
                 
                 game.somText.text = "Goed!";
                 player.canShoot = false;
-               
+                Coins.addcoin();
+
             }
             else
             {
