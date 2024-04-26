@@ -12,10 +12,11 @@ public class movement : MonoBehaviour
     Rigidbody2D rb;// een rigidbody2d voor de player zodat hij niet in de lucht blijft hangen
     float Speed = 5f;// een float voor de snelheid van de player / hoe snel de speler kant lopen
     public float HorizontalInput; // een public float voor de horizontale input wat dus a en d is
-    public bool canJump = true; // een bool dat checkt of je kan springen
+    public bool canJump; // een bool dat checkt of je kan springen
     // Start is called before the first frame update
     void Start()
     {
+        canJump = false;
         rb = GetComponent<Rigidbody2D>();// zet een rigidbody2d op je rb
        
     }
