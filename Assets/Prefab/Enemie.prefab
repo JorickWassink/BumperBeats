@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6426977772023281693}
   m_Layer: 0
   m_Name: Enemie
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,9 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 4339177256763379340, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
   enemyPos: {fileID: 4202522967118977056}
-  spawnBullet: {fileID: 0}
   Bullet: {fileID: 8698088084699432532, guid: 0733b48cccb3d1e43862a2cc774268b2, type: 3}
-  BulletCount: 0
 --- !u!61 &6426977772023281693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,7 +132,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.08485034}
