@@ -15,6 +15,12 @@ public class MoveToPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
