@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Answers : MonoBehaviour
 {
@@ -20,14 +21,16 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 1)
             {
                 objectD = GameObject.Find("A");
-                Destroy(objectD);
+                Invoke("BackToMenu", 2);
+                
                 game.somText.text = "Goed!";
-                player.canShoot = false;
+                player.canShoot = false;               
             }
             else
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
+                Invoke("BackToMenu", 2);
             }
             print("A");
         }
@@ -36,14 +39,16 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 2)
             {
                 objectD = GameObject.Find("B");
-                Destroy(objectD);
+                Invoke("BackToMenu", 2);
+                
                 game.somText.text = "Goed!";
-                player.canShoot = false;
+                player.canShoot = false;              
             }
             else
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
+                Invoke("BackToMenu", 2);
             }
             print("B");
         }
@@ -52,14 +57,16 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 4)
             {
                 objectD = GameObject.Find("C");
-                Destroy(objectD);
+                Invoke("BackToMenu", 2);
+                
                 game.somText.text = "Goed!";
-                player.canShoot = false;
+                player.canShoot = false;      
             }
             else
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
+                Invoke("BackToMenu", 2);
             }
             print("C");
         }
@@ -68,16 +75,23 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 3)
             {
                 objectD = GameObject.Find("D");
-                Destroy(objectD);
+                Invoke("BackToMenu", 2);
+                
                 game.somText.text = "Goed!";
                 player.canShoot = false;
+               
             }
             else
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
+                Invoke("BackToMenu", 2);
             }
             print("D");
         }
+    }
+    private void BackToMenu()
+    {
+        SceneManager.LoadScene("Leon");
     }
 }
