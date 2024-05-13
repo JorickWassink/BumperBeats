@@ -10,6 +10,7 @@ public class doors : MonoBehaviour
     public bool MainGameDoor;
     public bool pinballDoor;
     [SerializeField] Transform playertransform;
+    [SerializeField] coins coins;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class doors : MonoBehaviour
         getCoinsDoor = false;
         MainGameDoor = false;
         pinballDoor = false;
+        
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class doors : MonoBehaviour
         }
         if (collision.CompareTag("Player") && MainGameDoor == true)
         {
+            coins.removecoin();
             SceneManager.LoadScene("Sam");
         }
     }
