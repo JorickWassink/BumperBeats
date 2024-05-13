@@ -13,17 +13,16 @@ public class EnemyThing : MonoBehaviour
         spawnBullet = this.gameObject.transform.GetChild(0);
         transform.up = playerPos.position - transform.position;
         StartCoroutine(SpawnBullet());
-
     }
 
     IEnumerator SpawnManager()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(SpawnBullet());
     }
     IEnumerator SpawnBullet()
     {
-        yield return new WaitForSeconds(Random.Range(0f, 3f));
+        yield return new WaitForSeconds(0);
         Instantiate(Bullet, spawnBullet.position, Quaternion.identity);
         StartCoroutine(SpawnManager());
     }
