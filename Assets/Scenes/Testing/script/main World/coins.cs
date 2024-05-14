@@ -7,7 +7,7 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 public class coins : MonoBehaviour
 {
     [SerializeField] TMP_Text CoinsText;
-    [SerializeField] static int CoinsCount;
+    public static int CoinsCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +26,7 @@ public class coins : MonoBehaviour
     {
         CoinsCount++;
     }
-    public void removecoin()
-    {
-        CoinsCount--;
-    }
+ 
    
 }
 
