@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cdf7a1a9e96f8fa40970c9cd35523883, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.20126136, g: 0.21695617, b: 0.25182742, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,7 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &13138160
+=======
+--- !u!1001 &43197688
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -133,6 +137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream
       value: Portal (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
@@ -142,6 +147,17 @@ PrefabInstance:
     - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.21
+=======
+      value: portal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.32
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -181,6 +197,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
       insertIndex: -1
+<<<<<<< Updated upstream
       addedObject: {fileID: 1817903204}
   m_SourcePrefab: {fileID: 100100000, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
 --- !u!1 &130236170
@@ -221,11 +238,22 @@ RectTransform:
   m_SizeDelta: {x: 5.312, y: 2.5651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &130236172
+=======
+      addedObject: {fileID: 121549551}
+  m_SourcePrefab: {fileID: 100100000, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+--- !u!1 &121549550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+  m_PrefabInstance: {fileID: 43197688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &121549551
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 130236170}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -418,6 +446,20 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 798485217}
   m_SourcePrefab: {fileID: 100100000, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+=======
+  m_GameObject: {fileID: 121549550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f22b429e6475141a53894bc7a9775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorIndex: 1
+  getCoinsDoor: 0
+  MainGameDoor: 1
+  pinballDoor: 0
+  playertransform: {fileID: 1262202680}
+  coins: {fileID: 998843506}
+>>>>>>> Stashed changes
 --- !u!1 &227414122
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +590,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &276432283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+  m_PrefabInstance: {fileID: 163936207760063242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &276432284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276432283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f22b429e6475141a53894bc7a9775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorIndex: 2
+  getCoinsDoor: 0
+  MainGameDoor: 0
+  pinballDoor: 0
+  playertransform: {fileID: 1262202680}
+  coins: {fileID: 998843506}
+>>>>>>> Stashed changes
 --- !u!1 &331994167
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +917,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &798485212 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
@@ -856,10 +925,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!58 &798485217
 CircleCollider2D:
+=======
+--- !u!1 &761425653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+  m_PrefabInstance: {fileID: 829740278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &761425654
+MonoBehaviour:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 798485212}
   m_Enabled: 1
   m_Density: 1
@@ -889,6 +968,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+=======
+  m_GameObject: {fileID: 761425653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f22b429e6475141a53894bc7a9775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorIndex: 0
+  getCoinsDoor: 1
+  MainGameDoor: 0
+  pinballDoor: 0
+  playertransform: {fileID: 1262202680}
+  coins: {fileID: 998843506}
+>>>>>>> Stashed changes
 --- !u!1 &805146098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1270,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &829740278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_Name
+      value: portal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 761425654}
+  m_SourcePrefab: {fileID: 100100000, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
 --- !u!1 &835326390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinsText: {fileID: 1996464105}
+<<<<<<< Updated upstream
 --- !u!114 &998843507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,6 +1823,8 @@ MonoBehaviour:
   playertransform: {fileID: 1262202680}
   coins: {fileID: 998843506}
   NoCoins: {fileID: 130236172}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1262202675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,6 +2221,7 @@ RectTransform:
   m_AnchoredPosition: {x: 24.03, y: 3.04}
   m_SizeDelta: {x: 5.312, y: 2.5651}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!1001 &1586681038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2129,6 +2286,8 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1849417322}
   m_SourcePrefab: {fileID: 100100000, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1782948915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,6 +3062,69 @@ RectTransform:
   m_AnchoredPosition: {x: -5.5999994, y: 3.78}
   m_SizeDelta: {x: 5.312, y: 2.5651}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
+=======
+--- !u!1001 &163936207760063242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_Name
+      value: portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 276432284}
+  m_SourcePrefab: {fileID: 100100000, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2920,6 +3142,12 @@ SceneRoots:
   - {fileID: 1788554997}
   - {fileID: 1369658563}
   - {fileID: 998843505}
+<<<<<<< Updated upstream
   - {fileID: 1586681038}
   - {fileID: 180970647}
   - {fileID: 13138160}
+=======
+  - {fileID: 163936207760063242}
+  - {fileID: 43197688}
+  - {fileID: 829740278}
+>>>>>>> Stashed changes
