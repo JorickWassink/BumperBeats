@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,36 +9,46 @@ public class doors : MonoBehaviour
 
     [SerializeField] Transform playertransform;
     [SerializeField] coins coins;
-    // Start is called before the first frame update
+    [SerializeField] TMP_Text NoCoins;
+
     void Start()
     {
-     
-        
+        NoCoins.enabled = false;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void Coinsdoor()
     {
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.CompareTag("Player") && playertransform.position == new Vector3(7.914441f, 2.11f, 0))// deze is voor coins
-        {
-            SceneManager.LoadScene("Jorick");
-        }
-        if(collision.CompareTag("Player") && playertransform.position == new Vector3(14.5f, 5.421f, 0))// dit is voor eerste game
-        {
-            coins.removecoin();
-            SceneManager.LoadScene("Sam");
-        }
-
-
+        SceneManager.LoadScene("Jorick");
     }
     public void ReturnCoinsDoor()
     {
         SceneManager.LoadScene("Leon");
         playertransform.position = new Vector3(10, 1.5748f, 0);
+    }
+    public void firstGameDoor()
+    {
+
+        if(coins.CoinsCount < 1) 
+        {
+     
+            NoCoins.enabled = false;
+            StartCoroutine(wait(2));
+            NoCoins.enabled = true;
+     
+        }
+        else
+        {
+            coins.CoinsCount--;
+            SceneManager.LoadScene("sam");
+         
+        }
+    }
+    IEnumerator wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
+    public void ReturnFirstGameDoor()
+    {
+        SceneManager.LoadScene("leon");
     }
 }

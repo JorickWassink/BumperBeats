@@ -41,5 +41,13 @@ public class movement : MonoBehaviour
         {
             canJump = true;//zet canjump op true
         }
+        if (collision.CompareTag("door") && collision.gameObject.name == "coinsdoor")
+        {
+            doors.Coinsdoor();
+        }
+        if(collision.CompareTag("door") && collision.gameObject.name == "firstdoor")
+        {
+            doors.firstGameDoor();
+        }
     }
 }
