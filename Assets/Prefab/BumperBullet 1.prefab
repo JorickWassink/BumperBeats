@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5626234492036186487}
   - component: {fileID: -707395074929229555}
   m_Layer: 2
-  m_Name: BumperBullet
+  m_Name: BumperBullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

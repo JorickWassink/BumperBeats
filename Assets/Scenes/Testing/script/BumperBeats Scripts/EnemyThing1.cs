@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyThing : MonoBehaviour
+public class EnemyThing1 : MonoBehaviour
 {
     [SerializeField] Transform playerPos;
     [SerializeField] Transform enemyPos;
@@ -17,7 +17,7 @@ public class EnemyThing : MonoBehaviour
 
     IEnumerator SpawnManager()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.25f);
         StartCoroutine(SpawnBullet());
     }
     IEnumerator SpawnBullet()
