@@ -1,51 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class doors : MonoBehaviour
 {
-    public int doorIndex;
-    public bool getCoinsDoor;
-    public bool MainGameDoor;
-    public bool pinballDoor;
+
     [SerializeField] Transform playertransform;
     [SerializeField] coins coins;
+    [SerializeField] TMP_Text NoCoins;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        doorIndex = -1;
-        getCoinsDoor = false;
-        MainGameDoor = false;
-        pinballDoor = false;
-        
+
+        NoCoins.enabled = false;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Coinsdoor()
+    {
+        SceneManager.LoadScene("Jorick");
+    }
+    public void ReturnCoinsDoor()
+    {
+        SceneManager.LoadScene("Leon");
+        playertransform.position = new Vector3(10, 1.5748f, 0);
+    }
+    public void firstGameDoor()
     {
 
+        if (coins.CoinsCount < 1)
+        {
+
+            NoCoins.enabled = false;
+            StartCoroutine(wait(2));
+            NoCoins.enabled = true;
+
+        }
+        else
+        {
+            coins.CoinsCount--;
+            SceneManager.LoadScene("sam");
+
+        }
+
+
+    }
+    IEnumerator wait(float seconds)
+    {
+
+        yield return new WaitForSeconds(seconds);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && transform.position == new Vector3(8, 2.07f, 0))
+       /* if (collision.CompareTag("Player") && transform.position == new Vector3(8, 2.07f, 0))
         {
-            getCoinsDoor = true;
-            playertransform.position = new Vector3 (6, 1.5748f, 0);
+         
         }
-        if(collision.CompareTag("Player") && transform.position == new Vector3(14.5f, 5.421f, 0))
+        if (collision.CompareTag("Player") && transform.position == new Vector3(14.5f, 5.421f, 0))
         {
-            MainGameDoor = true;
+         
         }
-        if (collision.CompareTag("Player") && getCoinsDoor == true)
+        if (collision.CompareTag("Player") && transform.position == new Vector3(23.83f, 2.17f, 0))
+        {
+           
+        }
+        if (collision.CompareTag("Player") )
         {
             SceneManager.LoadScene("Jorick");
         }
-        if (collision.CompareTag("Player") && MainGameDoor == true)
+        if (collision.CompareTag("Player"))
         {
-            coins.removecoin();
             SceneManager.LoadScene("Sam");
-        }
+        }*/
     }
+    
 }
