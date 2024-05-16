@@ -23,6 +23,7 @@ public class PinBall : MonoBehaviour
 
     void LateUpdate()
     {
+        
         Vector3 worldDirectionToPointForward = rb.velocity.normalized;
         Vector3 localDirectionToPointForward = Vector3.right;
 
