@@ -26,14 +26,9 @@ public class coins : MonoBehaviour
     {
         CoinsCount += 1;
     }
-<<<<<<< Updated upstream:Assets/Scenes/Testing/script/main World/coins.cs
- 
-=======
     public void removecoin()
     {
         CoinsCount -= 1;
-    }
->>>>>>> Stashed changes:Assets/script/main World/coins.cs
-   
+    }   
 }
 
