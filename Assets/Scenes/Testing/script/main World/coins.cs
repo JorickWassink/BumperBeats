@@ -24,13 +24,9 @@ public class coins : MonoBehaviour
     }
    public void addcoin()
     {
-        CoinsCount += 1;
+        CoinsCount++;
     }
-    public void removecoin()
-    {
-        CoinsCount -= 1;
-    }
-
+ 
    
 }
 
