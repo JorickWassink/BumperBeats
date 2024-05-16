@@ -5,8 +5,8 @@ using UnityEngine;
 public class PinBall : MonoBehaviour
 {
     private Rigidbody2D rb;
-    float speed;
-    // Start is called before the first frame update
+    private int force = 5;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -15,23 +15,23 @@ public class PinBall : MonoBehaviour
         // die omhoog gaat als je een bumper aanraakt
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //rb.velocity += 
-    }
-
     void LateUpdate()
-    {
-        
-        Vector3 worldDirectionToPointForward = rb.velocity.normalized;
-        Vector3 localDirectionToPointForward = Vector3.right;
+    {        
+        Vector3 wDirection = rb.velocity.normalized;
+        Vector3 lDirection = Vector3.right;
 
-        Vector3 currentWorldForwardDirection = transform.TransformDirection(
-                localDirectionToPointForward);
-        float angleDiff = Vector3.SignedAngle(currentWorldForwardDirection,
-                worldDirectionToPointForward, Vector3.forward);
+        Vector3 currentWDirection = transform.TransformDirection(lDirection);
+
+        float angleDiff = Vector3.SignedAngle(currentWDirection,wDirection, Vector3.forward);
 
         transform.Rotate(Vector3.forward, angleDiff, Space.World);
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag.Contains("Bumper"))
+    //    {
+    //        rb.AddForce(transform.forward * 5);
+    //    }        
+    //}
 }
