@@ -49,7 +49,7 @@ public class movement : MonoBehaviour
         {
             doors.firstGameDoor();
         }
-        if(collision.CompareTag("door") && collision.gameObject.name == "pinball")
+        if(collision.CompareTag("door") && collision.gameObject.name == "PinBall")
         {
             doors.pinballdoor();
         }

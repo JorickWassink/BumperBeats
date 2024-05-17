@@ -8,6 +8,7 @@ public class pointsystem : MonoBehaviour
     
     [SerializeField] PlincoGun plincoGun;
     [SerializeField] BulletsPlinco bulletsPlinco;
+    [SerializeField] coins coins;
     public int score = 0;
     public TMP_Text scoretext;
     // Start is called before the first frame update
@@ -28,7 +29,6 @@ public class pointsystem : MonoBehaviour
     public void plusBullet()
     {
         plincoGun.plusbullet();
-
     }
     public void Plus5Points()
     {
@@ -54,6 +54,14 @@ public class pointsystem : MonoBehaviour
         print("10");
         score = score + 10;
         scoretext.text = score.ToString();
+    }
+    public void addcoin1()
+    {
+        coins.addcoin();
+    }
+    public void addcoins2()
+    {
+        coins.add2coins();
     }
 }
 
