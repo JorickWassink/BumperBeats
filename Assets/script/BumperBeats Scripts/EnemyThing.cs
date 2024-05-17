@@ -17,7 +17,7 @@ public class EnemyThing : MonoBehaviour
 
     IEnumerator SpawnManager()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1);
         StartCoroutine(SpawnBullet());
     }
     IEnumerator SpawnBullet()

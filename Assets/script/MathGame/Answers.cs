@@ -22,7 +22,7 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 1)
             {
                 objectD = GameObject.Find("A");
-                Invoke("BackToMenu", 2);
+                //Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
                 player.canShoot = false;
@@ -32,7 +32,7 @@ public class Answers : MonoBehaviour
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
-                Invoke("BackToMenu", 2);
+                //Invoke("BackToMenu", 2);
             }
             print("A");
         }
@@ -41,7 +41,7 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 2)
             {
                 objectD = GameObject.Find("B");
-                Invoke("BackToMenu", 2);
+               // Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
                 player.canShoot = false;
@@ -51,7 +51,7 @@ public class Answers : MonoBehaviour
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
-                Invoke("BackToMenu", 2);
+               // Invoke("BackToMenu", 2);
             }
             print("B");
         }
@@ -60,7 +60,7 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 4)
             {
                 objectD = GameObject.Find("C");
-                Invoke("BackToMenu", 2);
+               // Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
                 player.canShoot = false;
@@ -70,7 +70,7 @@ public class Answers : MonoBehaviour
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
-                Invoke("BackToMenu", 2);
+               // Invoke("BackToMenu", 2);
             }
             print("C");
         }
@@ -79,7 +79,7 @@ public class Answers : MonoBehaviour
             if (game.whichOne == 3)
             {
                 objectD = GameObject.Find("D");
-                Invoke("BackToMenu", 2);
+               // Invoke("BackToMenu", 2);
                 
                 game.somText.text = "Goed!";
                 player.canShoot = false;
@@ -90,9 +90,10 @@ public class Answers : MonoBehaviour
             {
                 game.somText.text = "Fout!";
                 player.canShoot = false;
-                Invoke("BackToMenu", 2);
+               // Invoke("BackToMenu", 2);
             }
             print("D");
+            //asfgbwgia
         }
     }
     private void BackToMenu()
