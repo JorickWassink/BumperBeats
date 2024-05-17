@@ -24,13 +24,57 @@ public class PlayerTurning : MonoBehaviour
             SceneManager.LoadScene("Leon");
         }
 
-        float rotate = Input.GetAxis("Horizontal"); 
+        //float rotate = Input.GetAxis("Horizontal"); 
 
-        transform.Rotate(new Vector3(0, 0, -1) * rotate * Time.deltaTime * rotationSpeed);
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 315);
+        }
+
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 225);
+        }
+
+        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 135);
+        }
+
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+        }
+
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.rotation = Quaternion.Euler(0 , 0 , 0);
+        }
+
+        else if(Input.GetKey(KeyCode.A))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 90);
+        }
+
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+
+        else if (Input.GetKey(KeyCode.D))
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+
+
+
+        //transform.Rotate(new Vector3(0, 0, -1) * rotate * Time.deltaTime * rotationSpeed);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         rb.AddForce(moveDirection * moveSpeed);
+
     }
+
 }
