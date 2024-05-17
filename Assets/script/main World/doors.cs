@@ -22,7 +22,7 @@ public class doors : MonoBehaviour
 
     public void Coinsdoor()
     {
-        SceneManager.LoadScene("Jorick");
+        SceneManager.LoadScene("MathGame");
     }
     public void ReturnCoinsDoor()
     {
