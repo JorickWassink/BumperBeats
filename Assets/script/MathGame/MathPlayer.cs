@@ -29,6 +29,6 @@ public class MathPlayer : MonoBehaviour
     {
        line.SetPosition(0,bulletStart.position);
        line.SetPosition(1,bulletEnd.position);
-        
+        //bosigbloagss
     }
 }
