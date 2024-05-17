@@ -133,7 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
       propertyPath: m_Name
-      value: pinball
+      value: PinBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027398070573517474, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
+      propertyPath: m_TagString
+      value: door
       objectReference: {fileID: 0}
     - target: {fileID: 4493289348409423537, guid: 0efef8af7ee4fd54887d3c22220df8a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1900,7 +1904,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.043898165, y: -0.021454275}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1911,7 +1915,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1}
+  m_Size: {x: 0.51754355, y: 0.9953642}
   m_EdgeRadius: 0
 --- !u!61 &1262202682
 BoxCollider2D:

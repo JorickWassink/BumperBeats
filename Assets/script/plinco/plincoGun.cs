@@ -12,17 +12,19 @@ public class PlincoGun : MonoBehaviour
     public Transform endPos;
     private Vector3 targetPos;
     int bulletcount;
+    bool activebullet;
 
     public void Start()
     {
-        bulletcount = 10;
+        activebullet = GameObject.Find("BulletClone") != null;
+        bulletcount = 0;
         targetPos = startPos.position;
     }
     public void plusbullet()
     {
-        bulletcount++;
+        bulletcount -= 5;
     }
-   
+
 
     private void FixedUpdate()
     {
@@ -41,14 +43,18 @@ public class PlincoGun : MonoBehaviour
 
     private void Update()
     {
+        activebullet = GameObject.Find("BulletClone") != null;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            bulletcount--;
-            GameObject clone = Instantiate(bullet, transform.position - new Vector3(0,1,0), Quaternion.identity);
-            clone.transform.parent = this.transform;
-            clone.name = "BulletClone";
+            if (bulletcount < 10)
+            {
+                bulletcount++;
+                GameObject clone = Instantiate(bullet, transform.position - new Vector3(0, 1, 0), Quaternion.identity);
+                clone.transform.parent = this.transform;
+                clone.name = "BulletClone";
+            }
         }
-        if(bulletcount == 0)
+        if (activebullet == false && bulletcount == 10)
         {
             SceneManager.LoadScene("Leon");
         }
@@ -59,11 +65,11 @@ public class PlincoGun : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "StartPos" ) 
+        if (collision.gameObject.name == "StartPos")
         {
             targetPos = endPos.position;
         }
-        if(collision.gameObject.name == "EndPos")
+        if (collision.gameObject.name == "EndPos")
         {
             targetPos = startPos.position;
         }

@@ -62,6 +62,25 @@ public class BulletsPlinco : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            
+        }
+        if(collision.gameObject.name == "1 coins")
+        {
+            if (gameObject.name == "BulletClone")
+            {
+                Destroy(gameObject);
+            }
+            print("1 coin");
+            pt.addcoin1();
+        }
+        if(collision.gameObject.name == "2 coins")
+        {
+            if (gameObject.name == "BulletClone")
+            {
+                Destroy(gameObject);
+            }
+            print("2 coins");
+            pt.addcoins2();
         }
     }
 
