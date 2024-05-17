@@ -4425,6 +4425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700357617}
   - component: {fileID: 700357616}
+  - component: {fileID: 700357618}
   m_Layer: 2
   m_Name: scenemanager
   m_TagString: Untagged
@@ -4446,6 +4447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plincoGun: {fileID: 29106411}
   bulletsPlinco: {fileID: 1685118813}
+  coins: {fileID: 700357618}
   score: 0
   scoretext: {fileID: 553451690}
 --- !u!4 &700357617
@@ -4463,6 +4465,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &700357618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700357615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f49e0df13547243aca1317cf66c530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinsText: {fileID: 0}
 --- !u!1001 &716522075
 PrefabInstance:
   m_ObjectHideFlags: 0
