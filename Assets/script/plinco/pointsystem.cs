@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class pointsystem : MonoBehaviour
 {
+    
     [SerializeField] PlincoGun plincoGun;
     [SerializeField] BulletsPlinco bulletsPlinco;
-    public int score;
+    public int score = 0;
     public TMP_Text scoretext;
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        score = 0;
+        
     }
 
     // Update is called once per frame
@@ -24,36 +25,35 @@ public class pointsystem : MonoBehaviour
             scoretext.text = score.ToString();// zet score naar een string en zet dat op de text van scoretext
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void plusBullet()
     {
-        if (collision.gameObject.name == "1 ball")
-        {
-            plincoGun.plusbullet();
-            bulletsPlinco.Destroyobject();
-        }
-        if (collision.gameObject.name == "5 score")
-        {
-            print("5");
-            score += 5;
-            bulletsPlinco.Destroyobject();
-        }
-        if (collision.gameObject.name == "2 score")
-        {
-            print("2");
-            score += 2;
-            bulletsPlinco.Destroyobject();
-        }
-        if (collision.gameObject.name == "1 score")
-        {
-            print("1");
-            score ++;
-            bulletsPlinco.Destroyobject();
-        }
-        if ((collision.gameObject.name == "10 score"))
-        {
-            print("10");
-            score += 10;
-            bulletsPlinco.Destroyobject();
-        }
+        plincoGun.plusbullet();
+
+    }
+    public void Plus5Points()
+    {
+        print("5");
+        score = score + 5;
+        scoretext.text = score.ToString();
+    }
+    public void Plus2Points()
+    {
+        print("2");
+        score = score + 2;
+        scoretext.text = score.ToString();
+    }
+    public void Plus1Point()
+    {
+        print("1");
+        score = score + 1;
+        scoretext.text = score.ToString();
+  
+    }
+    public void Plus10Points()
+    {
+        print("10");
+        score = score + 10;
+        scoretext.text = score.ToString();
     }
 }
+

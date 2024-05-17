@@ -15,9 +15,7 @@ public class doors : MonoBehaviour
 
     void Start()
     {
-
         NoCoins.enabled = false;
-
     }
 
     public void Coinsdoor()
@@ -34,20 +32,43 @@ public class doors : MonoBehaviour
 
         if (coins.CoinsCount < 1)
         {
-
             NoCoins.enabled = false;
             StartCoroutine(wait(2));
             NoCoins.enabled = true;
-
         }
         else
         {
             coins.CoinsCount--;
             SceneManager.LoadScene("sam");
-
         }
-
-
+    }
+    public void pinballdoor()
+    {
+        if (coins.CoinsCount < 1)
+        {
+            NoCoins.enabled = false;
+            StartCoroutine(wait(2));
+            NoCoins.enabled = true;
+        }
+        else
+        {
+            coins.CoinsCount--;
+            SceneManager.LoadScene("Jorick");
+        }
+    }
+    public void PlincoDoor()
+    {
+        if (coins.CoinsCount < 1)
+        {
+            NoCoins.enabled = false;
+            StartCoroutine(wait(2));
+            NoCoins.enabled = true;
+        }
+        else
+        {
+            coins.CoinsCount--;
+            SceneManager.LoadScene("Leon2");
+        }
     }
     IEnumerator wait(float seconds)
     {
