@@ -25,6 +25,10 @@ public class coins : MonoBehaviour
     {
         CoinsCount++;
     }
+    public void add2coins()
+    {
+        CoinsCount += 2;
+    }
  
    
 }

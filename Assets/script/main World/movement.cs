@@ -49,5 +49,13 @@ public class movement : MonoBehaviour
         {
             doors.firstGameDoor();
         }
+        if(collision.CompareTag("door") && collision.gameObject.name == "pinball")
+        {
+            doors.pinballdoor();
+        }
+        if (collision.CompareTag("door") && collision.gameObject.name == "Plinco")
+        {
+            doors.PlincoDoor(); 
+        }
     }
 }
