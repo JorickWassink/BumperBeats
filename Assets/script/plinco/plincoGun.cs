@@ -56,7 +56,7 @@ public class PlincoGun : MonoBehaviour
         }
         if (activebullet == false && bulletcount == 10)
         {
-            SceneManager.LoadScene("Leon");
+            SceneManager.LoadScene("HubWorld");
         }
         if (bulletcount != 0 && balltext != null)// checkt of bulletcount niet 0 is en of balltext niet leeg is
         {

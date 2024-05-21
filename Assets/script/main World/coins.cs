@@ -7,11 +7,11 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 public class coins : MonoBehaviour
 {
     [SerializeField] TMP_Text CoinsText;
-    public static int CoinsCount;
+    public static int CoinsCount = 3;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
