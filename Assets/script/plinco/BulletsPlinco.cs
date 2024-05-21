@@ -7,6 +7,7 @@ public class BulletsPlinco : MonoBehaviour
 {
     [SerializeField] pointsystem pt;
     [SerializeField] coins coins;
+    [SerializeField] PlincoSound ps;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +17,25 @@ public class BulletsPlinco : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.name == "bouncePlinco")
+        {
+            ps.PlayBoing();
+        }
         if (collision.gameObject.name == "1 ball")
         {
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
-            pt.plusBullet();
+            pt.PlusBullet();
         }
         if (collision.gameObject.name == "5 score")
         {
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             pt.Plus5Points();
         }
@@ -37,6 +44,7 @@ public class BulletsPlinco : MonoBehaviour
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             pt.Plus2Points();
         }
@@ -45,6 +53,7 @@ public class BulletsPlinco : MonoBehaviour
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             pt.Plus1Point();
         }
@@ -53,6 +62,7 @@ public class BulletsPlinco : MonoBehaviour
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             pt.Plus10Points();
         }
@@ -61,6 +71,7 @@ public class BulletsPlinco : MonoBehaviour
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             
         }
@@ -69,6 +80,7 @@ public class BulletsPlinco : MonoBehaviour
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             print("1 coin");
             pt.addcoin1();
@@ -78,6 +90,7 @@ public class BulletsPlinco : MonoBehaviour
             if (gameObject.name == "BulletClone")
             {
                 Destroy(gameObject);
+                ps.PlayFireWork();
             }
             print("2 coins");
             pt.addcoins2();
