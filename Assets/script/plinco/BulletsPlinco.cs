@@ -5,9 +5,9 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class BulletsPlinco : MonoBehaviour
 {
-    [SerializeField] pointsystem pt;
-    [SerializeField] coins coins;
-    [SerializeField] PlincoSound ps;
+    [SerializeField] pointsystem pt;// een referencie naar de point system script
+    [SerializeField] coins coins;// een referencie naar de coins script
+    [SerializeField] PlincoSound ps;// een referencie naar de PlincoSound script
     // Start is called before the first frame update
     void Start()
     {
@@ -17,18 +17,18 @@ public class BulletsPlinco : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "bouncePlinco")
+        if (collision.gameObject.name == "bouncePlinco")// als de collision een gameobject een object met de naam bouncePlinco raakt
         {
-            ps.PlayBoing();
+            ps.PlayBoing();//speelt de PlayBoing method van de PlincoSound script
         }
-        if (collision.gameObject.name == "1 ball")
+        if (collision.gameObject.name == "+ balls")// als de collision een gameobject een object raakt met de naam + balls raakt
         {
-            if (gameObject.name == "BulletClone")
+            if (gameObject.name == "BulletClone")//checkt of de gameobject naam BulletClone is
             {
-                Destroy(gameObject);
-                ps.PlayFireWork();
+                Destroy(gameObject);// destroyed de gameobject
+                ps.PlayFireWork();// speelt de PlayFireWork method in PlincoSound script
             }
-            pt.PlusBullet();
+            pt.PlusBullet();//runt de PlusBullet method in de point system script
         }
         if (collision.gameObject.name == "5 score")
         {
@@ -37,7 +37,7 @@ public class BulletsPlinco : MonoBehaviour
                 Destroy(gameObject);
                 ps.PlayFireWork();
             }
-            pt.Plus5Points();
+            pt.Plus5Points();// runt de Plus5Points method in de point system script
         }
         if (collision.gameObject.name == "2 score")
         {
@@ -46,7 +46,7 @@ public class BulletsPlinco : MonoBehaviour
                 Destroy(gameObject);
                 ps.PlayFireWork();
             }
-            pt.Plus2Points();
+            pt.Plus2Points();// runt de Plus2Points method in de point system script
         }
         if (collision.gameObject.name == "one score")
         {
@@ -55,7 +55,7 @@ public class BulletsPlinco : MonoBehaviour
                 Destroy(gameObject);
                 ps.PlayFireWork();
             }
-            pt.Plus1Point();
+            pt.Plus1Point();// runt de Plus1Point method in de point system script
         }
         if ((collision.gameObject.name == "10 score"))
         {
@@ -64,7 +64,7 @@ public class BulletsPlinco : MonoBehaviour
                 Destroy(gameObject);
                 ps.PlayFireWork();
             }
-            pt.Plus10Points();
+            pt.Plus10Points();// runt de Plus10Points method in de pointsystem script
         }
         if(((collision.gameObject.name == "end background")))
         {
@@ -82,8 +82,7 @@ public class BulletsPlinco : MonoBehaviour
                 Destroy(gameObject);
                 ps.PlayFireWork();
             }
-            print("1 coin");
-            pt.addcoin1();
+            pt.addcoin1();// runt de addcoin1 method in pointsystem script
         }
         if(collision.gameObject.name == "2 coins")
         {
@@ -92,8 +91,7 @@ public class BulletsPlinco : MonoBehaviour
                 Destroy(gameObject);
                 ps.PlayFireWork();
             }
-            print("2 coins");
-            pt.addcoins2();
+            pt.addcoins2();//runt de addcoins2 method in pointsystem script
         }
     }
 
