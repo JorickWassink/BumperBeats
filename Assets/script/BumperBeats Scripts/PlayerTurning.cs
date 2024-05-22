@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerTurning : MonoBehaviour
 {
+    public int health = 20;
     [SerializeField] Transform playerPos;
     [SerializeField] float moveSpeed = 40f;
     [SerializeField] float rotationSpeed = 90f;
@@ -24,7 +26,6 @@ public class PlayerTurning : MonoBehaviour
             SceneManager.LoadScene("Leon");
         }
 
-        //float rotate = Input.GetAxis("Horizontal"); 
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
@@ -66,15 +67,33 @@ public class PlayerTurning : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 270);
         }
 
-
-
-        //transform.Rotate(new Vector3(0, 0, -1) * rotate * Time.deltaTime * rotationSpeed);
+        
     }
 
     private void FixedUpdate()
     {
         rb.AddForce(moveDirection * moveSpeed);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Respawn"))
+        {
+            PlayerHealth();
+        }
+    }
+    private void PlayerHealth()
+    {
+        if (health >= 1)
+        {
+            health--;
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
