@@ -30,12 +30,10 @@ public class PlincoGun : MonoBehaviour
     {
         Vector3 currentPos = transform.position;// vector3 voor de currentPos dat de transform position pakt van waar de script opstaat
 
-        float distanceToStart = Vector3.Distance(currentPos, startPos.position);
-        float distanceToEnd = Vector3.Distance(currentPos, endPos.position);
+        float distanceToStart = Vector3.Distance(currentPos, startPos.position);//float dat kijkt naar de afstand van de currentpos tot de startpos
+        float distanceToEnd = Vector3.Distance(currentPos, endPos.position);//float dat kijkt naar de afstand vand currentpos tot de eindpos
 
-
-        // Calculate the direction to the target position
-        Vector3 targetDirection = (targetPos - currentPos).normalized;
+        Vector3 targetDirection = (targetPos - currentPos).normalized;//berekent de afstand to de targetpos
 
        
         rb.MovePosition(currentPos + targetDirection * Time.deltaTime * 5f);//verplaats de gun naar de positie
@@ -43,20 +41,19 @@ public class PlincoGun : MonoBehaviour
 
     private void Update()
     {
-        activebullet = GameObject.Find("BulletClone") != null;
-        if (Input.GetKeyDown(KeyCode.Space))
+        activebullet = GameObject.Find("BulletClone") != null;//zoekt naar een gameobject met de naar BulletClone en kijkt of het niet null is en slaat het op in activebullet
+        if (Input.GetKeyDown(KeyCode.Space))//kijkt of je spacebar indrukt
         {
-            if (bulletcount > 0)
+            if (bulletcount > 0)//kijkt of bullet count hoger dan 0 is
             {
-                bulletcount--;
-                GameObject clone = Instantiate(bullet, transform.position - new Vector3(0, 1, 0), Quaternion.identity);
-                clone.transform.parent = this.transform;
-                clone.name = "BulletClone";
+                bulletcount--;//verlaagt bulletcount met 1
+                GameObject clone = Instantiate(bullet, transform.position - new Vector3(0, 1, 0), Quaternion.identity);// instantiate een bullet op de positie van deze transform maar met 1 lager y level 
+                clone.name = "BulletClone";//maakt de naam BulletClone 
             }
         }
-        if (activebullet == false && bulletcount == 0)
+        if (activebullet == false && bulletcount == 0)//kijkt of activebullet false is en bulletcount 0
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");//laadt de GameOver scene
         }
         if (bulletcount != 0 && balltext != null)// checkt of bulletcount niet 0 is en of balltext niet leeg is
         {
@@ -65,9 +62,9 @@ public class PlincoGun : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "StartPos")
+        if (collision.gameObject.name == "StartPos")// kijkt of het een object raakt met de naam StartPos
         {
-            targetPos = endPos.position;
+            targetPos = endPos.position;//zet targetPos naar endPost posistion
         }
         if (collision.gameObject.name == "EndPos")
         {
