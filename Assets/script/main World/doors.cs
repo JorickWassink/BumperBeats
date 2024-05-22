@@ -67,7 +67,7 @@ public class doors : MonoBehaviour
         else
         {
             coins.CoinsCount--;
-            SceneManager.LoadScene("Leon2");
+            SceneManager.LoadScene("PlincoGame");
         }
     }
     IEnumerator wait(float seconds)

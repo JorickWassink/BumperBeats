@@ -26,9 +26,9 @@ public class pointsystem : MonoBehaviour
             scoretext.text = score.ToString();// zet score naar een string en zet dat op de text van scoretext
         }
     }
-    public void plusBullet()
+    public void PlusBullet()
     {
-        plincoGun.plusbullet();
+        plincoGun.plusbullets();
     }
     public void Plus5Points()
     {

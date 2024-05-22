@@ -17,12 +17,12 @@ public class PlincoGun : MonoBehaviour
     public void Start()
     {
         activebullet = GameObject.Find("BulletClone") != null;
-        bulletcount = 0;
+        bulletcount = 10;
         targetPos = startPos.position;
     }
-    public void plusbullet()
+    public void plusbullets()
     {
-        bulletcount -= 5;
+        bulletcount += 5;
     }
 
 
@@ -46,17 +46,17 @@ public class PlincoGun : MonoBehaviour
         activebullet = GameObject.Find("BulletClone") != null;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (bulletcount < 10)
+            if (bulletcount > 0)
             {
-                bulletcount++;
+                bulletcount--;
                 GameObject clone = Instantiate(bullet, transform.position - new Vector3(0, 1, 0), Quaternion.identity);
                 clone.transform.parent = this.transform;
                 clone.name = "BulletClone";
             }
         }
-        if (activebullet == false && bulletcount == 10)
+        if (activebullet == false && bulletcount == 0)
         {
-            SceneManager.LoadScene("Leon");
+            SceneManager.LoadScene("HubWorld");
         }
         if (bulletcount != 0 && balltext != null)// checkt of bulletcount niet 0 is en of balltext niet leeg is
         {
