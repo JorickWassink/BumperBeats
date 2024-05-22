@@ -28,40 +28,36 @@ public class pointsystem : MonoBehaviour
     }
     public void PlusBullet()
     {
-        plincoGun.plusbullets();
+        plincoGun.plusbullets();//runt de plusbullets method in de plincogun script
     }
     public void Plus5Points()
     {
-        print("5");
-        score = score + 5;
-        scoretext.text = score.ToString();
+        score = score + 5;// voegt 5 toe aan score
+        scoretext.text = score.ToString();//zet de score om naar een string en zet het op de text van scoretext
     }
     public void Plus2Points()
     {
-        print("2");
         score = score + 2;
         scoretext.text = score.ToString();
     }
     public void Plus1Point()
     {
-        print("1");
         score = score + 1;
         scoretext.text = score.ToString();
   
     }
     public void Plus10Points()
     {
-        print("10");
         score = score + 10;
         scoretext.text = score.ToString();
     }
     public void addcoin1()
     {
-        coins.addcoin();
+        coins.addcoin();//runt de addcoin method in coins script
     }
     public void addcoins2()
     {
-        coins.add2coins();
+        coins.add2coins();//runt de add2coins method in coins script
     }
 }
 

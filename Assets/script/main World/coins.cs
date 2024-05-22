@@ -24,11 +24,11 @@ public class coins : MonoBehaviour
     }
    public void addcoin()
     {
-        CoinsCount++;
+        CoinsCount++;//verhoogt coinscount met 1
     }
     public void add2coins()
     {
-        CoinsCount += 2;
+        CoinsCount += 2;//verhoogt coinscount met 2
     }
  
    
