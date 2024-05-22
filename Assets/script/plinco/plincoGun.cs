@@ -5,30 +5,30 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class PlincoGun : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] TMP_Text balltext;
-    public Transform startPos;
-    public Transform endPos;
-    private Vector3 targetPos;
-    int bulletcount;
-    bool activebullet;
+    [SerializeField] GameObject bullet;// een refernece naar de bullet gameobject
+    [SerializeField] Rigidbody2D rb;// een reference naar een rigidbody2D
+    [SerializeField] TMP_Text balltext;// een reference naar een TMP_text voor de aantal ballen
+    public Transform startPos;// public transform voor de begin positie waar de gun naar toe gaat
+    public Transform endPos;// public transform voor de eind positie waar de gun naar toe gaat
+    private Vector3 targetPos;// een vector3 dat de target positie pakt en waar de gun dus ook naar toe gaat
+    int bulletcount;// een int voor de aantal bullets dat je nog over hebt
+    bool activebullet;// bool dat checkt of er nog bullets op het scherm zijn
 
     public void Start()
     {
-        activebullet = GameObject.Find("BulletClone") != null;
-        bulletcount = 10;
-        targetPos = startPos.position;
+        activebullet = GameObject.Find("BulletClone") != null;// zet activebullet op tekijken naar gameobject met de naam BulletClone en kijkt of het niet null is
+        bulletcount = 10;//zet bulletcount naar 10
+        targetPos = startPos.position;// zet de targetpos naar de position van startpos
     }
     public void plusbullets()
     {
-        bulletcount += 5;
+        bulletcount += 5;// voegt 5 value to aan bulletcount
     }
 
 
     private void FixedUpdate()
     {
-        Vector3 currentPos = transform.position;
+        Vector3 currentPos = transform.position;// vector3 voor de currentPos dat de transform position pakt van waar de script opstaat
 
         float distanceToStart = Vector3.Distance(currentPos, startPos.position);
         float distanceToEnd = Vector3.Distance(currentPos, endPos.position);
@@ -37,8 +37,8 @@ public class PlincoGun : MonoBehaviour
         // Calculate the direction to the target position
         Vector3 targetDirection = (targetPos - currentPos).normalized;
 
-        // Move gun towards the target position
-        rb.MovePosition(currentPos + targetDirection * Time.deltaTime * 5f);
+       
+        rb.MovePosition(currentPos + targetDirection * Time.deltaTime * 5f);//verplaats de gun naar de positie
     }
 
     private void Update()
@@ -56,7 +56,7 @@ public class PlincoGun : MonoBehaviour
         }
         if (activebullet == false && bulletcount == 0)
         {
-            SceneManager.LoadScene("HubWorld");
+            SceneManager.LoadScene("GameOver");
         }
         if (bulletcount != 0 && balltext != null)// checkt of bulletcount niet 0 is en of balltext niet leeg is
         {

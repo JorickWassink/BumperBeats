@@ -70,6 +70,20 @@ public class doors : MonoBehaviour
             SceneManager.LoadScene("PlincoGame");
         }
     }
+    public void BreakOutDoor()
+    {
+        if (coins.CoinsCount < 1)
+        {
+            NoCoins.enabled = false;
+            StartCoroutine(wait(2));
+            NoCoins.enabled = true;
+        }
+        else
+        {
+            coins.CoinsCount--;
+            SceneManager.LoadScene("Zeineb");
+        }
+    }
     IEnumerator wait(float seconds)
     {
 
