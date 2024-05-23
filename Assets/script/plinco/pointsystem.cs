@@ -9,12 +9,14 @@ public class pointsystem : MonoBehaviour
     [SerializeField] PlincoGun plincoGun;
     [SerializeField] BulletsPlinco bulletsPlinco;
     [SerializeField] coins coins;
+    [SerializeField] GameObject vischaca;
     public int score = 0;
     public TMP_Text scoretext;
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+     
+        vischaca.SetActive(false);
         
     }
 
@@ -24,6 +26,10 @@ public class pointsystem : MonoBehaviour
         if (score != 0 && scoretext != null)// checkt of score niet 0 is en of scoretext niet leeg is
         {
             scoretext.text = score.ToString();// zet score naar een string en zet dat op de text van scoretext
+        }
+        if(score > 15)
+        {
+            vischaca.SetActive (true);
         }
     }
     public void PlusBullet()
