@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Prefab/Scenes/PlincoGame.unity
     guid: b5fdfc6af67c8514ca543c68ff5bd6c8
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Prefab/Scenes/GameOver.unity
     guid: eb7644621688c404a906ecf167dbc97b
   m_configObjects: {}
