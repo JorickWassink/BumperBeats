@@ -5892,7 +5892,7 @@ MonoBehaviour:
   plincoGun: {fileID: 29106411}
   bulletsPlinco: {fileID: 1685118813}
   coins: {fileID: 700357618}
-  viscacha: {fileID: 0}
+  viscacha: {fileID: 1407779275}
   score: 0
   scoretext: {fileID: 553451690}
 --- !u!4 &700357617
@@ -5922,6 +5922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f49e0df13547243aca1317cf66c530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viscacha: {fileID: 1407779275}
   CoinsText: {fileID: 0}
 --- !u!114 &700357619
 MonoBehaviour:
@@ -10317,7 +10318,7 @@ GameObject:
   - component: {fileID: 1323089698}
   - component: {fileID: 1323089700}
   m_Layer: 0
-  m_Name: 1 ball
+  m_Name: + balls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
