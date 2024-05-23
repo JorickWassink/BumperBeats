@@ -20,6 +20,7 @@ public class EnemyThing : MonoBehaviour
         yield return new WaitForSeconds(1);
         StartCoroutine(SpawnBullet());
     }
+
     IEnumerator SpawnBullet()
     {
         yield return new WaitForSeconds(0);

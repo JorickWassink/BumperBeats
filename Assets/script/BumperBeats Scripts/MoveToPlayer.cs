@@ -3,14 +3,18 @@ using UnityEngine;
 public class MoveToPlayer : MonoBehaviour
 {
     bool canKillEnemy = false;
-    EnemyThing enemyThing;
+
     [SerializeField] float force = 10;
     [SerializeField] Transform playerTarget;
+
+    NextRound nextRound;
     PlayerTurning playerTurning;
     Rigidbody2D rb;
 
+
     void Start()
     {
+        nextRound =  FindAnyObjectByType<NextRound>();
         playerTurning = FindAnyObjectByType<PlayerTurning>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.AddForce(playerTarget.position - transform.position * force);
@@ -24,6 +28,7 @@ public class MoveToPlayer : MonoBehaviour
             if (canKillEnemy == true)
             {
                 Destroy(collision.gameObject);
+                nextRound.enemyAmount--;
             }
         }
 

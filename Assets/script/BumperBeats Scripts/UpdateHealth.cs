@@ -10,9 +10,9 @@ public class UpdateHealth : MonoBehaviour
     {
         playerTurning = FindAnyObjectByType<PlayerTurning>();
     }
-    // Update is called once per frame
+
     void Update()
     {
-        healthText.SetText("helf: " + playerTurning.health);
+        healthText.SetText("HEALTH: " + playerTurning.health);
     }
 }

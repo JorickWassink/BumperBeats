@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerTurning : MonoBehaviour
 {
-    public int health = 20;
-    [SerializeField] Transform playerPos;
+    [SerializeField] public int health = 20;
+
     [SerializeField] float moveSpeed = 40f;
     [SerializeField] float rotationSpeed = 90f;
+    [SerializeField] Transform playerPos;
+
+    Rigidbody2D rb = null;
 
     Vector2 moveDirection;
-    Rigidbody2D rb = null;
+
     void Start()
     {
         playerPos.position = new Vector3(0 , 0 , 0);
@@ -66,14 +69,11 @@ public class PlayerTurning : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 270);
         }
-
-        
     }
 
     private void FixedUpdate()
     {
         rb.AddForce(moveDirection * moveSpeed);
-
     }
 
     public void PlayerHealth()
@@ -86,7 +86,7 @@ public class PlayerTurning : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
-
 }
