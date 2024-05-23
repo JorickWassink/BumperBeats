@@ -5892,7 +5892,7 @@ MonoBehaviour:
   plincoGun: {fileID: 29106411}
   bulletsPlinco: {fileID: 1685118813}
   coins: {fileID: 700357618}
-  vischaca: {fileID: 1407779275}
+  viscacha: {fileID: 0}
   score: 0
   scoretext: {fileID: 553451690}
 --- !u!4 &700357617
@@ -10957,7 +10957,7 @@ Transform:
   m_GameObject: {fileID: 1407779275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.902, y: 4.781, z: -0.1}
+  m_LocalPosition: {x: 11.235, y: 6.066, z: -0.1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []

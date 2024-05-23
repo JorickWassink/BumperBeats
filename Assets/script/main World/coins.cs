@@ -6,12 +6,13 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class coins : MonoBehaviour
 {
-    [SerializeField] TMP_Text CoinsText;
-    public static int CoinsCount = 3;
+    [SerializeField] GameObject viscacha;// een reference naar de viscacha gameobject
+    [SerializeField] TMP_Text CoinsText;//een tmp text met de naam coinstext
+    public static int CoinsCount = 3;//maakt een coinscount aan en zet de value op 3
     // Start is called before the first frame update
     void Start()
     {
-        
+        viscacha.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,6 +21,10 @@ public class coins : MonoBehaviour
         if (CoinsCount != 0 && CoinsText != null)// checkt of coinscount niet 0 is en of coinstext niet leeg is
         {
             CoinsText.text = CoinsCount.ToString();// zet coinscount naar een string en zet dat op de text van coinstext
+        }
+        if(CoinsCount > 10)
+        {
+            viscacha.SetActive(true);
         }
     }
    public void addcoin()
