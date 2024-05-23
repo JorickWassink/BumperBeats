@@ -76,14 +76,7 @@ public class PlayerTurning : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Respawn"))
-        {
-            PlayerHealth();
-        }
-    }
-    private void PlayerHealth()
+    public void PlayerHealth()
     {
         if (health >= 1)
         {
