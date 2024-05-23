@@ -7,9 +7,9 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 public class BumperSpin : MonoBehaviour
 {
     int rotation = 0;
-    void Update()
+    void FixedUpdate()
     {
         transform.rotation = Quaternion.Euler(0, 0, rotation);
-        rotation++;
+        rotation += 5;
     }
 }

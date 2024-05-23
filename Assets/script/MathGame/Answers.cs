@@ -98,6 +98,6 @@ public class Answers : MonoBehaviour
     }
     private void BackToMenu()
     {
-        SceneManager.LoadScene("Leon");
+        SceneManager.LoadScene("GameOver");
     }
 }
