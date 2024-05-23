@@ -373,6 +373,7 @@ MonoBehaviour:
   bullet: {fileID: 1685118803}
   rb: {fileID: 29106410}
   balltext: {fileID: 532620434}
+  PS: {fileID: 700357616}
   startPos: {fileID: 1644324124}
   endPos: {fileID: 1583470656}
 --- !u!61 &29106414
@@ -3904,7 +3905,7 @@ PrefabInstance:
     - target: {fileID: 5050626531672675345, guid: b7949ecbcce482f45b285d8f7f34fc09, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: b415ba349ce0cf348b98c9c24cfe1fe6, type: 2}
     - target: {fileID: 5626234492036186487, guid: b7949ecbcce482f45b285d8f7f34fc09, type: 3}
       propertyPath: m_Simulated
       value: 0
