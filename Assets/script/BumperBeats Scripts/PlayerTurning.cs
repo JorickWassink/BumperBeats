@@ -23,7 +23,7 @@ public class PlayerTurning : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Leon");
+            SceneManager.LoadScene("GameOver");
         }
 
 
