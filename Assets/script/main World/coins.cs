@@ -6,12 +6,11 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class coins : MonoBehaviour
 {
-    [SerializeField] TMP_Text CoinsText;
-    public static int CoinsCount = 3;
+    [SerializeField] TMP_Text CoinsText;//een tmp text met de naam coinstext
+    public static int CoinsCount = 3;//maakt een coinscount aan en zet de value op 3
     // Start is called before the first frame update
     void Start()
-    {
-        
+    { 
     }
 
     // Update is called once per frame
@@ -21,14 +20,15 @@ public class coins : MonoBehaviour
         {
             CoinsText.text = CoinsCount.ToString();// zet coinscount naar een string en zet dat op de text van coinstext
         }
+        
     }
    public void addcoin()
     {
-        CoinsCount++;
+        CoinsCount++;//verhoogt coinscount met 1
     }
     public void add2coins()
     {
-        CoinsCount += 2;
+        CoinsCount += 2;//verhoogt coinscount met 2
     }
  
    

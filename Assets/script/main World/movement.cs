@@ -41,9 +41,9 @@ public class movement : MonoBehaviour
         {
             canJump = true;//zet canjump op true
         }
-        if (collision.CompareTag("door") && collision.gameObject.name == "coinsdoor")
+        if (collision.CompareTag("door") && collision.gameObject.name == "coinsdoor")//checkt of de collision iet raakt met de tag door en de gameobject heeft ook de naam coinsdoor
         {
-            doors.Coinsdoor();
+            doors.Coinsdoor();//runt de Coinsdoor method in doors script
         }
         if(collision.CompareTag("door") && collision.gameObject.name == "firstdoor")
         {

@@ -8,6 +8,7 @@ public class EnemyThing2 : MonoBehaviour
     [SerializeField] GameObject Bullet;
 
     Transform spawnBullet;
+
     void Start()
     {
         spawnBullet = this.gameObject.transform.GetChild(0);
@@ -20,6 +21,7 @@ public class EnemyThing2 : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(SpawnBullet());
     }
+
     IEnumerator SpawnBullet()
     {
         yield return new WaitForSeconds(0);

@@ -6,6 +6,7 @@ public class PlincoSound : MonoBehaviour
 {
     public AudioSource boing;
     public AudioSource fireworks;
+    public AudioSource sound;
     
     // Start is called before the first frame update
     void Start()
@@ -16,19 +17,26 @@ public class PlincoSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!sound.isPlaying)
+        {
+            playBackGround();
+        }
     }
     public void PlayBoing()
     {
-        boing.Play();
-        StartCoroutine(wait(1f));
+        boing.Play();//speelt de boing sound
+        StartCoroutine(wait(1f));//start een corountine dat 1 seconde duurt
     }
     IEnumerator wait(float seconds)
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(seconds);//return de aantal seconds dat als parameter is meegegeven
     }
     public void PlayFireWork()
     {
-        fireworks.Play();
+        fireworks.Play();//speelt de firework sound
+    }
+    public void playBackGround()
+    {
+        sound.Play();
     }
 }
