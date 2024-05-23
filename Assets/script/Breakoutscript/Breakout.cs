@@ -36,17 +36,10 @@ public class Breakout : MonoBehaviour
         Destroy(pblokje.gameObject);
     }
 
-    void Blokjes()
-    {
-        if (blokjes = true)
-        {
-            Invoke("Blok", 0.5f);
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
         rbBall.velocity = new Vector2(rbBall.velocity.x, rbBall.velocity.y );
     }
+    //blabla
 }
