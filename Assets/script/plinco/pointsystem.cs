@@ -65,5 +65,9 @@ public class pointsystem : MonoBehaviour
     {
         coins.add2coins();//runt de add2coins method in coins script
     }
+    public void savescore()
+    {
+        PlayerPrefs.SetInt("plincoscoer", score);
+    }
 }
 
