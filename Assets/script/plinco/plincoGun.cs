@@ -8,6 +8,7 @@ public class PlincoGun : MonoBehaviour
     [SerializeField] GameObject bullet;// een refernece naar de bullet gameobject
     [SerializeField] Rigidbody2D rb;// een reference naar een rigidbody2D
     [SerializeField] TMP_Text balltext;// een reference naar een TMP_text voor de aantal ballen
+    public pointsystem PS;// een reference naar pointsystem script
     public Transform startPos;// public transform voor de begin positie waar de gun naar toe gaat
     public Transform endPos;// public transform voor de eind positie waar de gun naar toe gaat
     private Vector3 targetPos;// een vector3 dat de target positie pakt en waar de gun dus ook naar toe gaat
@@ -53,6 +54,7 @@ public class PlincoGun : MonoBehaviour
         }
         if (activebullet == false && bulletcount == 0)//kijkt of activebullet false is en bulletcount 0
         {
+            PS.savescore();
             SceneManager.LoadScene("GameOver");//laadt de GameOver scene
         }
         if (bulletcount != 0 && balltext != null)// checkt of bulletcount niet 0 is en of balltext niet leeg is
