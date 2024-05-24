@@ -42,7 +42,6 @@ public class MoveToPlayer : MonoBehaviour
         {
             canKillEnemy = true;
             rb.AddForce(playerTarget.position - transform.position * -200);
-
         }
     }
 }

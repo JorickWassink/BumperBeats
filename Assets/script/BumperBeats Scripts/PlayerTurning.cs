@@ -83,7 +83,7 @@ public class PlayerTurning : MonoBehaviour
             health--;
         }
 
-        else
+        else if (health <= 0)
         {
             Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
