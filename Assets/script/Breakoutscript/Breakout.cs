@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Breakout : MonoBehaviour
 {
     public Rigidbody2D rbBall;
-    bool blokjes = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,31 +15,31 @@ public class Breakout : MonoBehaviour
         rbBall.velocity = new Vector2(rbBall.velocity.x, -5);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) // classs voor als de ander iets anders aanraakt.
+    private void OnTriggerEnter2D(Collider2D collision) //Class voor als de ander iets anders aanraakt.
     {
-        if (collision.tag == "blokjes") //als iets wordt aangeraakt met de tag blokjes dan gebeurt dit.
+        if (collision.tag == "blokjes") //Als iets wordt aangeraakt met de tag blokjes dan gebeurt dit.
         {
-            blokjes = true; // de bool blokjes staat nu op true
-            StartCoroutine(BlokjesDelay(collision.gameObject));
-        }
-        if (collision.tag == "bumperBreakout") //Als iets wordt aangeraakt met de tag bumperBreakout dan gebeurt dit.
-        {
-            blokjes = true;
+            StartCoroutine(BlokjesDelay(collision.gameObject)); //De blokjes worden niet gelijk verwijdert zodat de bal
+                                                                //nog tijd heeft om terug te stuiteren
         }
 
+        if (collision.tag == "YouLose") //Als je de rode lijn onderin aanraakt
+        {
+            SceneManager.LoadScene("GameOver"); //Als je af gaat gaat ie terug naar hubworld
+        }
 
     }
 
-    IEnumerator BlokjesDelay(GameObject pblokje)
+    IEnumerator BlokjesDelay(GameObject pblokje) //Een class dat de blokjes delayed zodat de blokjes niet gelijk verwdwijnen
     {
-        yield return new WaitForSeconds(0.2f);
-        Destroy(pblokje.gameObject);
+        yield return new WaitForSeconds(0.1f); //De waiting voordat de blokje weggaat is 0.1f
+        Destroy(pblokje.gameObject); //De blokje wordt destroyed.
     }
 
     // Update is called once per frame
     void Update()
     {
-        rbBall.velocity = new Vector2(rbBall.velocity.x, rbBall.velocity.y );
+        rbBall.velocity = new Vector2(rbBall.velocity.x, rbBall.velocity.y);
     }
     //blabla
 }
