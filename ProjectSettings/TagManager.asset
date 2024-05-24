@@ -8,6 +8,13 @@ TagManager:
   - door
   - Bumper
   - Enemy
+  - blokjes
+  - bumperBreakout
+  - Wall
+  - Up
+  - Down
+  - Ball
+  - YouLose
   layers:
   - Default
   - TransparentFX
@@ -44,4 +51,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: blokjes
+    uniqueID: 2829377853
+    locked: 0
+  - name: Wall
+    uniqueID: 2784030745
     locked: 0

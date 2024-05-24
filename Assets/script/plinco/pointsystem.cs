@@ -5,31 +5,37 @@ using UnityEngine;
 
 public class pointsystem : MonoBehaviour
 {
-    
+
     [SerializeField] PlincoGun plincoGun;
     [SerializeField] BulletsPlinco bulletsPlinco;
     [SerializeField] coins coins;
     [SerializeField] GameObject viscacha;
     public int score = 0;
+    public static int highscore;
+    public static bool firstload;
     public TMP_Text scoretext;
     // Start is called before the first frame update
     void Start()
     {
-     
+        if (firstload == false)
+        {
+            highscore = 0;
+            firstload = true;
+        }
         viscacha.SetActive(false);//zet de viscacha gameobject op false zodat het niet gezien wordt
-        
+
     }
 
     // Update is called once per frame
-   public void Update()
+    public void Update()
     {
         if (score != 0 && scoretext != null)// checkt of score niet 0 is en of scoretext niet leeg is
         {
             scoretext.text = score.ToString();// zet score naar een string en zet dat op de text van scoretext
         }
-        if(score > 15)//checkt of de score hoger dan 15 is
+        if (score > 15)//checkt of de score hoger dan 15 is
         {
-            viscacha.SetActive (true);
+            viscacha.SetActive(true);
         }
     }
     public void PlusBullet()
@@ -50,7 +56,7 @@ public class pointsystem : MonoBehaviour
     {
         score = score + 1;
         scoretext.text = score.ToString();
-  
+
     }
     public void Plus10Points()
     {
@@ -67,7 +73,14 @@ public class pointsystem : MonoBehaviour
     }
     public void savescore()
     {
-        PlayerPrefs.SetInt("plincoscoer", score);
+        if (score > highscore)
+        {
+            highscore = score;
+            PlayerPrefs.SetInt("plinco", highscore);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("plinco", highscore);
+        }
     }
 }
-
