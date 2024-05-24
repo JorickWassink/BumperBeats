@@ -57,5 +57,9 @@ public class movement : MonoBehaviour
         {
             doors.PlincoDoor(); 
         }
+        if (collision.CompareTag("door") && collision.gameObject.name == "Breakout")
+        {
+            doors.BreakOutDoor();
+        }
     }
 }
