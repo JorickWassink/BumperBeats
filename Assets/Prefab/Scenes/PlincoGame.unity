@@ -3905,7 +3905,7 @@ PrefabInstance:
     - target: {fileID: 5050626531672675345, guid: b7949ecbcce482f45b285d8f7f34fc09, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: b415ba349ce0cf348b98c9c24cfe1fe6, type: 2}
+      objectReference: {fileID: 6200000, guid: e55cba227c1b3ce4cb073d695b87c05c, type: 2}
     - target: {fileID: 5626234492036186487, guid: b7949ecbcce482f45b285d8f7f34fc09, type: 3}
       propertyPath: m_Simulated
       value: 0
@@ -13444,7 +13444,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: b415ba349ce0cf348b98c9c24cfe1fe6, type: 2}
+  m_Material: {fileID: 6200000, guid: e55cba227c1b3ce4cb073d695b87c05c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
