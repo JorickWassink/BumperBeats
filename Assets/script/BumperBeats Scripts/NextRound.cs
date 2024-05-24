@@ -38,40 +38,44 @@ public class NextRound : MonoBehaviour
 
     IEnumerator StartNextRound()
     {
-        backGroundBeat.Stop();
-        voiceTalking.Play();
-
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Respawn");
-        foreach (GameObject bullet in bullets)
+        if (enemyAmount == 0)
         {
-            Destroy(bullet);
-        }
+            backGroundBeat.Stop();
+            voiceTalking.Play();
 
-        waiting = true;
-        enemyAmount = 8;
-
-        yield return new WaitForSeconds(2);
-
-        backGroundBeat.Play();
-        playerTurning.health = 20;
-        foreach (Transform t in transforms)
-        {
-            randomEnemy = Random.Range(0, 3);
-            switch (randomEnemy)
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Respawn");
+            foreach (GameObject bullet in bullets)
             {
-                case 0:
-                    Instantiate(slowEnemy, t.position, Quaternion.identity);
-                    break;
-
-                case 1:
-                    Instantiate(midEnemy, t.position, Quaternion.identity);
-                    break;
-
-                case 2:
-                    Instantiate(fastEnemy, t.position, Quaternion.identity);
-                    break;
+                Destroy(bullet);
             }
+
+            waiting = true;
+            enemyAmount = 8;
+
+            yield return new WaitForSeconds(2);
+
+            backGroundBeat.Play();
+            playerTurning.health = 20;
+            foreach (Transform t in transforms)
+            {
+                randomEnemy = Random.Range(0, 3);
+                switch (randomEnemy)
+                {
+                    case 0:
+                        Instantiate(slowEnemy, t.position, Quaternion.identity);
+                        break;
+
+                    case 1:
+                        Instantiate(midEnemy, t.position, Quaternion.identity);
+                        break;
+
+                    case 2:
+                        Instantiate(fastEnemy, t.position, Quaternion.identity);
+                        break;
+                }
+            }
+            waiting = false;
         }
-        waiting = false;
+        
     }
 }
