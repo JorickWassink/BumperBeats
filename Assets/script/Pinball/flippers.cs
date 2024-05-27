@@ -11,7 +11,7 @@ public class flippers : MonoBehaviour
     [SerializeField] Transform target2;
     [SerializeField] Transform start1;
     [SerializeField] Transform start2;
-    bool holdingSpace = false;
+    public bool holdingSpace = false;
     private void Update()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -31,4 +31,5 @@ public class flippers : MonoBehaviour
             else if (id == 2) transform.rotation = Quaternion.Lerp(transform.rotation, start2.rotation, Time.deltaTime * speed);
         }
     }
+
 }
