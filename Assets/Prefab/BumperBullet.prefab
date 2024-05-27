@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 20
   playerTarget: {fileID: 4339177256763379340, guid: 4a62c674e7557c743882519c7f763f84, type: 3}
+  bumperHit: {fileID: 0}
 --- !u!212 &1282617159430996489
 SpriteRenderer:
   m_ObjectHideFlags: 0
