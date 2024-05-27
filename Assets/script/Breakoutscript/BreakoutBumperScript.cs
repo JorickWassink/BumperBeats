@@ -14,6 +14,15 @@ public class BreakoutBumperScript : MonoBehaviour
         player = GetComponent<Rigidbody2D>(); //Hij zoekt of de gameobject een rigidbody heeft en zet die als rb
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PowerUp") //Als je de powerup aanraakt dan gebeurt dit
+        {
+            Destroy(collision.gameObject);//Destroyed de gameobject van powerup
+
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +36,7 @@ public class BreakoutBumperScript : MonoBehaviour
 
         if (transform.position.x >= 8.42)//Als de position van x groter of gelijk is aan 8.42
         {
-            transform.position = new Vector3(8.42f, transform.position.y, 0); //De positie van x, y en z wordt veranderd
+            transform.position = new Vector3(8.42f, transform.position.y, 0); //De positie van x, y en z wordt veranderd/
                                                                               //naar wat er tussen de haakjes staat.
         }
     }
