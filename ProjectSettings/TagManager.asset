@@ -15,6 +15,7 @@ TagManager:
   - Down
   - Ball
   - YouLose
+  - PowerUp
   layers:
   - Default
   - TransparentFX
