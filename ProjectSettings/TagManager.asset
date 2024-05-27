@@ -14,6 +14,8 @@ TagManager:
   - Up
   - Down
   - Ball
+  - YouLose
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -53,4 +55,7 @@ TagManager:
     locked: 0
   - name: blokjes
     uniqueID: 2829377853
+    locked: 0
+  - name: Wall
+    uniqueID: 2784030745
     locked: 0
