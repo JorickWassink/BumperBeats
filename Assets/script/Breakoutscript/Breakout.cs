@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,8 +9,10 @@ using UnityEngine.UIElements;
 public class Breakout : MonoBehaviour
 {
     [SerializeField] GameObject powerup;
+    public TMP_Text scoretext;
     public Rigidbody2D rbBall;
     int blokjesAantal = 98;
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,41 +34,35 @@ public class Breakout : MonoBehaviour
             SceneManager.LoadScene("GameOver"); //Als je af gaat gaat ie terug naar hubworld
         }
 
-
-        if (collision.tag == "PowerUp") //Als je de powerup aanraakt dan gebeurt dit
-        {
-            Destroy(collision.gameObject);//Destroyed de gameobject van powerup
-        }
-
     }
 
     IEnumerator BlokjesDelay(GameObject pblokje) //Een class dat de blokjes delayed zodat de blokjes niet gelijk verwdwijnen
     {
         yield return new WaitForSeconds(0.1f); //De waiting voordat de blokje weggaat is 0.1f
-        Destroy(pblokje.gameObject); //De blokje wordt destroyed.
+        if (pblokje)
+        {
+            Destroy(pblokje.gameObject); //De blokje wordt destroyed.
+            score++;
+        }
     }
+
 
     void PowerUps()
     {
-        //Random.Range(1,)
-        if (blokjesAantal <= 24.5f)
+        int randomNumber = Random.Range(0, 10);
+        if (randomNumber == 6)
         {
-
-        } else if (blokjesAantal == 49)
-        {
-
-        } else if (blokjesAantal == 70)
-        {
-
-        } else if (blokjesAantal == 84)
-        {
-
+            //powerup;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (score != 0 && scoretext != null) //checkt of score niet 0 is of de text niet leeg is
+        {
+            scoretext.text = score.ToString(); //Zet score naar een string.
+        }
         rbBall.velocity = new Vector2(rbBall.velocity.x, rbBall.velocity.y);
     }
     //blabla
