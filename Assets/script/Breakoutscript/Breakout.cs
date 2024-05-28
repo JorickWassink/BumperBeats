@@ -30,7 +30,7 @@ public class Breakout : MonoBehaviour
             int randomNumber = Random.Range(0, 11);
             if (randomNumber == 6)
             {
-                GameObject powerUpObject = Instantiate(powerup); //De powerup wordt opgeslagen in de powerupobject gameobject
+                GameObject powerUpObject = Instantiate(powerUp); //De powerup wordt opgeslagen in de powerupobject gameobject
                 powerUpObject.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y, collision.transform.position.z);
             }
         }
