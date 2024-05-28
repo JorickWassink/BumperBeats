@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextRound : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class NextRound : MonoBehaviour
     [SerializeField] GameObject midEnemy;
     [SerializeField] GameObject fastEnemy;
     [SerializeField] List<Transform> transforms = new List<Transform>();
-    [SerializeField] AudioSource voiceTalking;
+    [SerializeField] AudioSource roundStart;
     [SerializeField] AudioSource backGroundBeat;
 
     PlayerTurning playerTurning;
@@ -25,30 +26,25 @@ public class NextRound : MonoBehaviour
 
     void Update()
     {
-        print(enemyAmount);
 
         if (enemyAmount <= 0)
         {
             if (waiting == false) 
             {
-                StartCoroutine(StartNextRound());
+                SceneManager.LoadScene("Sam");
             }
         }
     }
 
-    IEnumerator StartNextRound()
+    public void StartRound()
     {
-        if (enemyAmount == 0)
-        {
+        StartCoroutine(StartNextRound());
+    }
+
+    public IEnumerator StartNextRound()
+    {
             backGroundBeat.Stop();
-            voiceTalking.Play();
-
-            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Respawn");
-            foreach (GameObject bullet in bullets)
-            {
-                Destroy(bullet);
-            }
-
+            roundStart.Play();
             waiting = true;
             enemyAmount = 8;
 
@@ -76,6 +72,4 @@ public class NextRound : MonoBehaviour
             }
             waiting = false;
         }
-        
-    }
 }
