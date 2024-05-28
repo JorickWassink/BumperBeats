@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerTurning : MonoBehaviour
 {
-    [SerializeField] public int health = 20;
+    NextRound nextRound = new NextRound();
 
+    [SerializeField] public int health = 20;
     [SerializeField] float moveSpeed = 40f;
     [SerializeField] float rotationSpeed = 90f;
     [SerializeField] Transform playerPos;
+
+    public int currentScore;
 
     Rigidbody2D rb = null;
 
@@ -18,12 +21,19 @@ public class PlayerTurning : MonoBehaviour
 
     void Start()
     {
+        currentScore = PlayerPrefs.GetInt("RhythRicoTempScore");
+        nextRound = FindAnyObjectByType<NextRound>();
         playerPos.position = new Vector3(0 , 0 , 0);
         rb = GetComponent<Rigidbody2D>();
+        nextRound.StartRound();
     }
 
     void Update()
     {
+        currentScore = PlayerPrefs.GetInt("RhythRicoTempScore");
+
+        print(currentScore);
+
         if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("GameOver");

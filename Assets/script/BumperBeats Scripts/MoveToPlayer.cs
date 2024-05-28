@@ -11,9 +11,11 @@ public class MoveToPlayer : MonoBehaviour
     PlayerTurning playerTurning;
     Rigidbody2D rb;
 
+    ScoreKeeper scoreKeeper = new ScoreKeeper();
 
     void Start()
     {
+        scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
         nextRound =  FindAnyObjectByType<NextRound>();
         playerTurning = FindAnyObjectByType<PlayerTurning>();
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -27,6 +29,7 @@ public class MoveToPlayer : MonoBehaviour
             Destroy(gameObject);
             if (canKillEnemy == true)
             {
+                scoreKeeper.totalScore += 100; 
                 Destroy(collision.gameObject);
                 nextRound.enemyAmount--;
             }
