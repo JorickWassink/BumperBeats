@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BreakoutBumperScript : MonoBehaviour
 {
@@ -12,15 +13,6 @@ public class BreakoutBumperScript : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>(); //Hij zoekt of de gameobject een rigidbody heeft en zet die als rb
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "PowerUp") //Als je de powerup aanraakt dan gebeurt dit
-        {
-            Destroy(collision.gameObject);//Destroyed de gameobject van powerup
-
-        }
     }
 
     // Update is called once per frame
@@ -38,6 +30,11 @@ public class BreakoutBumperScript : MonoBehaviour
         {
             transform.position = new Vector3(8.42f, transform.position.y, 0); //De positie van x, y en z wordt veranderd/
                                                                               //naar wat er tussen de haakjes staat.
+        }
+
+        if (GameObject.FindGameObjectWithTag("Ball") == null)
+        {
+            SceneManager.LoadScene("GameOver"); //Als je af gaat gaat ie terug naar hubworld
         }
     }
 }
