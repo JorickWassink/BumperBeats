@@ -3742,6 +3742,8 @@ MonoBehaviour:
   rythemviscacha: {fileID: 746325713}
   plincotext: {fileID: 1243025478}
   PinBallText: {fileID: 585468236}
+  rythemText: {fileID: 1912170826}
+  breakoutText: {fileID: 919158846}
 --- !u!1 &1169162757
 GameObject:
   m_ObjectHideFlags: 0
