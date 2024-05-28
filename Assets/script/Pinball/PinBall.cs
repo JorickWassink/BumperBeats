@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PinBall : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PinBall : MonoBehaviour
         if (collision.gameObject.tag.Contains("PowerUp"))
         {
            rb.AddForce(collision.transform.up * 2000);
+        }
+        if (collision.gameObject.tag.Contains("YouLose"))
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
