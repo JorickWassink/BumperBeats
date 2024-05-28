@@ -1059,7 +1059,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -10719,7 +10719,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -20537,7 +20537,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -30791,14 +30791,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907838900}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.34525472, w: 0.93850905}
-  m_LocalPosition: {x: 5.33, y: -3.56, z: -0.028499814}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2727224, w: 0.9620928}
+  m_LocalPosition: {x: 5.3300004, y: -3.56, z: -0.028499814}
   m_LocalScale: {x: 2.2199, y: 2.2697, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1706531153}
   m_Father: {fileID: 2136356700}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.395}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.653}
 --- !u!61 &907838902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31336,7 +31336,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1085449120}
   - component: {fileID: 1085449119}
-  - component: {fileID: 1085449121}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: YouLose
@@ -31404,18 +31403,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1085449121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085449118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52ee4c1726976314e9496c1ff3f67d7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1160624914
 GameObject:
   m_ObjectHideFlags: 0
@@ -37084,7 +37071,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -41761,14 +41748,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676418266}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.35204655, w: 0.9359825}
+  m_LocalRotation: {x: -0, y: -0, z: 0.17195274, w: 0.9851053}
   m_LocalPosition: {x: -10.66, y: -3.56, z: -0.028499814}
   m_LocalScale: {x: 2.2199, y: 2.2697, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 533742135}
   m_Father: {fileID: 2136356700}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.803}
 --- !u!212 &1676418268
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47340,7 +47327,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -52347,7 +52334,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
