@@ -12,6 +12,8 @@ public class scores : MonoBehaviour
     [SerializeField] GameObject rythemviscacha;
     public TMP_Text plincotext;
     public TMP_Text PinBallText;
+    public TMP_Text rythemText;
+    public TMP_Text breakoutText;
     public static bool firstload;
     int plincoscore;
     int pinballscore;
@@ -28,6 +30,8 @@ public class scores : MonoBehaviour
         {
             PlayerPrefs.SetInt("plinco", 0);
             PlayerPrefs.SetInt("PinBallScore", 0);
+            PlayerPrefs.SetInt("RhythRicoTempScore", 0);
+            PlayerPrefs.SetInt("breakoutHighscore", 0);
             firstload = true;
         }
         if (plincotext != null)// checkt of plincohighscore niet leeg is
@@ -46,6 +50,15 @@ public class scores : MonoBehaviour
             if(pinballscore > 5000)
             {
                 pinballviscacha.SetActive (true);
+            }
+        }
+        if(rythemText != null)
+        {
+            rythemText.text = PlayerPrefs.GetInt("RhythRicoTempScore").ToString();
+            rythemscore = PlayerPrefs.GetInt("RhythRicoTempScore");
+            if(rythemscore > 5000)
+            {
+                rythemviscacha.SetActive (true);
             }
         }
     }
