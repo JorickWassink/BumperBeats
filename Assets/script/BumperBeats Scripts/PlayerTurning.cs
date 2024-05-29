@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerTurning : MonoBehaviour
 {
-    NextRound nextRound = new NextRound();
-
+    NextRound nextRound;
+    ScoreKeeper scoreKeeper;
     [SerializeField] public int health = 20;
     [SerializeField] float moveSpeed = 40f;
     [SerializeField] float rotationSpeed = 90f;
@@ -21,6 +21,7 @@ public class PlayerTurning : MonoBehaviour
 
     void Start()
     {
+        scoreKeeper = GetComponent<ScoreKeeper>();
         currentScore = PlayerPrefs.GetInt("RhythRicoTempScore");
         nextRound = FindAnyObjectByType<NextRound>();
         playerPos.position = new Vector3(0 , 0 , 0);
@@ -96,6 +97,7 @@ public class PlayerTurning : MonoBehaviour
         else if (health <= 0)
         {
             Destroy(gameObject);
+            PlayerPrefs.SetInt("RhythRicoHighScore", scoreKeeper.highScore);
             SceneManager.LoadScene("GameOver");
         }
     }
