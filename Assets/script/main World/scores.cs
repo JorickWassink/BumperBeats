@@ -31,7 +31,7 @@ public class scores : MonoBehaviour
             PlayerPrefs.SetInt("plinco", 0);
             PlayerPrefs.SetInt("PinBallScore", 0);
             PlayerPrefs.SetInt("RhythRicoTempScore", 0);
-            PlayerPrefs.SetInt("breakoutHighscore", 0);
+            PlayerPrefs.SetInt("highscoreBreakout", 0);
             firstload = true;
         }
         if (plincotext != null)// checkt of plincohighscore niet leeg is
@@ -59,6 +59,15 @@ public class scores : MonoBehaviour
             if(rythemscore > 5000)
             {
                 rythemviscacha.SetActive (true);
+            }
+        }
+        if(breakoutText != null)
+        {
+            breakoutText.text = PlayerPrefs.GetInt("highscoreBreakout").ToString();
+            breakoutscore = PlayerPrefs.GetInt("highscoreBreakout");
+            if(rythemscore > 50)
+            {
+                breakoutviscacha.SetActive (true);
             }
         }
     }
