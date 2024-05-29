@@ -83,7 +83,7 @@ public class doors : MonoBehaviour
     }
     public void quitdoor()
     {
-        Application.Quit();
+        Application.Quit();//sluit de applicatie af ( werkt alleen in een build )
     }
     IEnumerator wait(float seconds)
     {

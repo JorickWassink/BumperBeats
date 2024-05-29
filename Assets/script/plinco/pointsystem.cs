@@ -17,11 +17,10 @@ public class pointsystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highscore = PlayerPrefs.GetInt("plinco");
-        if (firstload == false)
+        highscore = PlayerPrefs.GetInt("plinco");//zet plinco int playerpref op highscore int
+        if (firstload == false)//chekt off de bool firstload op false is
         {
-            highscore = 0;
-            firstload = true;
+            firstload = true;//zet firstload op true
         }
         viscacha.SetActive(false);//zet de viscacha gameobject op false zodat het niet gezien wordt
 
@@ -74,10 +73,10 @@ public class pointsystem : MonoBehaviour
     }
     public void savescore()
     {
-        if (score > highscore)
+        if (score > highscore)//checkt of score hoger is dan highscore
         {
-            highscore = score;
-            PlayerPrefs.SetInt("plinco", highscore);
+            highscore = score;//zet highscore gelijk met score
+            PlayerPrefs.SetInt("plinco", highscore);//saved highscore op de plinco int playerpref
         }
         else
         {
