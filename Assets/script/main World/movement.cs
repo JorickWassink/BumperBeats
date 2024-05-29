@@ -61,5 +61,9 @@ public class movement : MonoBehaviour
         {
             doors.BreakOutDoor();
         }
+        if(collision.CompareTag("door") && collision.gameObject.name == "Quit")
+        {
+            doors.quitdoor();
+        }
     }
 }
