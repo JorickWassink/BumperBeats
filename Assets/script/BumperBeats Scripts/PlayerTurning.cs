@@ -21,7 +21,7 @@ public class PlayerTurning : MonoBehaviour
 
     void Start()
     {
-        scoreKeeper = GetComponent<ScoreKeeper>();
+        scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
         currentScore = PlayerPrefs.GetInt("RhythRicoTempScore");
         nextRound = FindAnyObjectByType<NextRound>();
         playerPos.position = new Vector3(0 , 0 , 0);
@@ -89,16 +89,18 @@ public class PlayerTurning : MonoBehaviour
 
     public void PlayerHealth()
     {
-        if (health >= 1)
+        if (health == 1)
         {
-            health--;
-        }
-
-        else if (health <= 0)
-        {
-            Destroy(gameObject);
             PlayerPrefs.SetInt("RhythRicoHighScore", scoreKeeper.highScore);
+            Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
         }
+
+        else if (health >= 1)
+        {
+            health--;
+            PlayerPrefs.SetInt("RhythRicoHighScore", scoreKeeper.highScore);
+        }
+
     }
 }
