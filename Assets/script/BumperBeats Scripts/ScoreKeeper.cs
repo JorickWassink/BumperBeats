@@ -9,7 +9,6 @@ public class ScoreKeeper : MonoBehaviour
     public int highScore;
 
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] TMP_Text scoreText2;
     void Start()
     {
         totalScore = PlayerPrefs.GetInt("RhythRicoTempScore");
@@ -18,7 +17,6 @@ public class ScoreKeeper : MonoBehaviour
 
     void Update()
     {
-        scoreText2.SetText("HIGHSCORE: " + highScore);
         scoreText.SetText("SCORE: " + totalScore);
 
         if (totalScore >= highScore)

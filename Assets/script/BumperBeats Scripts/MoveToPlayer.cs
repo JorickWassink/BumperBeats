@@ -15,6 +15,7 @@ public class MoveToPlayer : MonoBehaviour
 
     void Start()
     {
+        transform.up = playerTarget.position - transform.position;
         scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
         nextRound =  FindAnyObjectByType<NextRound>();
         playerTurning = FindAnyObjectByType<PlayerTurning>();
@@ -44,6 +45,7 @@ public class MoveToPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Bumper"))
         {
             canKillEnemy = true;
+            transform.up = playerTarget.position + transform.position;
             rb.AddForce(playerTarget.position - transform.position * -200);
         }
     }
