@@ -7,7 +7,7 @@ public class BreakoutBumperScript : MonoBehaviour
 {
     float horizontal; //Een float voor horizontale beweging van de bumper
     Rigidbody2D player; //De rigidbody
-    [SerializeField] float speed = 14f; //De float speed staat op 12f 
+    [SerializeField] float speed = 16f; //De float speed staat op 12f 
     [SerializeField] Breakout scoreReference;
 
     // Start is called before the first frame update
@@ -33,10 +33,15 @@ public class BreakoutBumperScript : MonoBehaviour
                                                                               //naar wat er tussen de haakjes staat.
         }
 
-        if (GameObject.FindGameObjectWithTag("Ball") == null)
+        if (GameObject.FindGameObjectWithTag("Ball") == null) //Als gameobject met de tag Ball null is gebeurt dit
         {
             PlayerPrefs.SetInt("highscoreBreakout", scoreReference.score);
             SceneManager.LoadScene("GameOver"); //Als je af gaat gaat ie terug naar hubworld
+        }
+
+        if (GameObject.FindGameObjectWithTag("blokjes") == null)
+        {
+
         }
     }
 }
