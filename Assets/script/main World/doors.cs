@@ -34,6 +34,7 @@ public class doors : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.SetInt("RhythRicoTempScore",0);
             coins.CoinsCount--;//verlaagt de coinscount van coins script met 1
             SceneManager.LoadScene("sam");
         }

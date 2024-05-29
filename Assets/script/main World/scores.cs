@@ -30,7 +30,7 @@ public class scores : MonoBehaviour
         {
             PlayerPrefs.SetInt("plinco", 0);
             PlayerPrefs.SetInt("PinBallScore", 0);
-            PlayerPrefs.SetInt("RhythRicoTempScore", 0);
+            PlayerPrefs.SetInt("RhythRicoHighScore", 0);
             PlayerPrefs.SetInt("highscoreBreakout", 0);
             firstload = true;
         }
