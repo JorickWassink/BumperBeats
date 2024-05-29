@@ -378,10 +378,10 @@ TextureImporter:
       name: Monster, viscacha, background_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 5
+        y: 236
+        width: 10
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -794,6 +794,153 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_32
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 236
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afb59f9fa497fb4a98941fc950bf455
+      internalID: -1083260324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_33
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 236
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e4fb92eb2e41e418c0e7793d72bf14
+      internalID: 530960083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_34
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 236
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06224875160ec714ab46e78d614d6214
+      internalID: 2094471645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_35
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 218
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548024e19cf18b94b8800fe7fb8a9c5c
+      internalID: -493918600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_36
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 218
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167d4825d6411eb4db0d5e9b960f49b2
+      internalID: 145425008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_37
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 218
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ba64db6b66251419cc9a0347310eed
+      internalID: 1007239189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster, viscacha, background_38
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 218
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06295762a749064eae1e9b3ef085cdd
+      internalID: 2079585046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -831,6 +978,13 @@ TextureImporter:
       Monster, viscacha, background_3: -1373694985
       Monster, viscacha, background_30: -522926990
       Monster, viscacha, background_31: 222487024
+      Monster, viscacha, background_32: 579935686
+      Monster, viscacha, background_33: -1083260324
+      Monster, viscacha, background_34: 530960083
+      Monster, viscacha, background_35: 2094471645
+      Monster, viscacha, background_36: -493918600
+      Monster, viscacha, background_37: 145425008
+      Monster, viscacha, background_38: 1007239189
       Monster, viscacha, background_4: 700573666
       Monster, viscacha, background_5: 818719331
       Monster, viscacha, background_6: 1481459454
