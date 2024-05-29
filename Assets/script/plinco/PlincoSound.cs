@@ -17,10 +17,7 @@ public class PlincoSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!sound.isPlaying)
-        {
-            playBackGround();
-        }
+        
     }
     public void PlayBoing()
     {
@@ -35,8 +32,5 @@ public class PlincoSound : MonoBehaviour
     {
         fireworks.Play();//speelt de firework sound
     }
-    public void playBackGround()
-    {
-        sound.Play();
-    }
+    
 }

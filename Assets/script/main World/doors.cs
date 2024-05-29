@@ -81,6 +81,10 @@ public class doors : MonoBehaviour
             SceneManager.LoadScene("Zeineb");
         }
     }
+    public void quitdoor()
+    {
+        Application.Quit();//sluit de applicatie af ( werkt alleen in een build )
+    }
     IEnumerator wait(float seconds)
     {
 
