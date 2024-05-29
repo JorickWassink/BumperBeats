@@ -11,7 +11,7 @@ public class MoveToPlayer : MonoBehaviour
     PlayerTurning playerTurning;
     Rigidbody2D rb;
 
-    ScoreKeeper scoreKeeper = new ScoreKeeper();
+    ScoreKeeper scoreKeeper;
 
     void Start()
     {
