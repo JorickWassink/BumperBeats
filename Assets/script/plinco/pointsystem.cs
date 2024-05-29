@@ -11,12 +11,13 @@ public class pointsystem : MonoBehaviour
     [SerializeField] coins coins;
     [SerializeField] GameObject viscacha;
     public int score = 0;
-    public static int highscore;
+    public int highscore;
     public static bool firstload;
     public TMP_Text scoretext;
     // Start is called before the first frame update
     void Start()
     {
+        highscore = PlayerPrefs.GetInt("plinco");
         if (firstload == false)
         {
             highscore = 0;
