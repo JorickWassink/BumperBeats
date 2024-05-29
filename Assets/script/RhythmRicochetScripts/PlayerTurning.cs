@@ -6,6 +6,7 @@ public class PlayerTurning : MonoBehaviour
     NextRound nextRound;
     ScoreKeeper scoreKeeper;
 
+    [SerializeField] GameObject infoScreen;
     [SerializeField] public int health = 20;
     [SerializeField] float moveSpeed = 40f;
     [SerializeField] Transform playerPos; //pakt de positie van de player
@@ -14,6 +15,7 @@ public class PlayerTurning : MonoBehaviour
 
     void Start()
     {
+        infoScreen.SetActive(false);
         scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
         currentScore = PlayerPrefs.GetInt("RhythRicoTempScore");
         nextRound = FindAnyObjectByType<NextRound>();
@@ -107,6 +109,21 @@ public class PlayerTurning : MonoBehaviour
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+
+
+        if (Input.GetKey(KeyCode.I))
+        {
+            AudioListener.pause = true;
+            infoScreen.SetActive(true);
+            Time.timeScale = 0; //pauzeert de game tijd
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            AudioListener.pause = false;
+            infoScreen.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 
