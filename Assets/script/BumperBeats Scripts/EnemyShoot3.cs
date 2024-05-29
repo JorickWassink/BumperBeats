@@ -1,13 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyThing : MonoBehaviour
+public class EnemyShoot3 : MonoBehaviour
 {
     [SerializeField] Transform playerPos;
     [SerializeField] Transform enemyPos;
     [SerializeField] GameObject Bullet;
 
     Transform spawnBullet;
+
     void Start()
     {
         spawnBullet = this.gameObject.transform.GetChild(0);
@@ -17,7 +18,7 @@ public class EnemyThing : MonoBehaviour
 
     IEnumerator SpawnManager()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(SpawnBullet());
     }
 

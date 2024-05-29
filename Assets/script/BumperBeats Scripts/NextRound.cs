@@ -17,6 +17,7 @@ public class NextRound : MonoBehaviour
     [SerializeField] AudioSource roundStart;
     [SerializeField] AudioSource backGroundBeat;
 
+    [SerializeField] ScoreKeeper scoreKeeper;
     PlayerTurning playerTurning;
 
     void Start()
@@ -31,6 +32,7 @@ public class NextRound : MonoBehaviour
         {
             if (waiting == false) 
             {
+                PlayerPrefs.SetInt("RhythRicoTempScore", scoreKeeper.totalScore);
                 SceneManager.LoadScene("Sam");
             }
         }
@@ -43,33 +45,33 @@ public class NextRound : MonoBehaviour
 
     public IEnumerator StartNextRound()
     {
-            backGroundBeat.Stop();
-            roundStart.Play();
-            waiting = true;
-            enemyAmount = 8;
+        backGroundBeat.Stop();
+        roundStart.Play();
+        waiting = true;
+        enemyAmount = 8;
 
-            yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2);
 
-            backGroundBeat.Play();
-            playerTurning.health = 20;
-            foreach (Transform t in transforms)
+        backGroundBeat.Play();
+        playerTurning.health = 20;
+        foreach (Transform t in transforms)
+        {
+            randomEnemy = Random.Range(0, 3);
+            switch (randomEnemy)
             {
-                randomEnemy = Random.Range(0, 3);
-                switch (randomEnemy)
-                {
-                    case 0:
-                        Instantiate(slowEnemy, t.position, Quaternion.identity);
-                        break;
+                case 0:
+                    Instantiate(slowEnemy, t.position, Quaternion.identity);
+                    break;
 
-                    case 1:
-                        Instantiate(midEnemy, t.position, Quaternion.identity);
-                        break;
+                case 1:
+                    Instantiate(midEnemy, t.position, Quaternion.identity);
+                    break;
 
-                    case 2:
-                        Instantiate(fastEnemy, t.position, Quaternion.identity);
-                        break;
-                }
+                case 2:
+                    Instantiate(fastEnemy, t.position, Quaternion.identity);
+                    break;
             }
-            waiting = false;
         }
+        waiting = false;
+    }
 }
