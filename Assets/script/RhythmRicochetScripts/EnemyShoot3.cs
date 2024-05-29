@@ -1,13 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyShoot2 : MonoBehaviour
+public class EnemyShoot3 : MonoBehaviour
 {
+    //dit script is ook fundementeel hetzelfde als EnemyShoot
     [SerializeField] Transform playerPos;
     [SerializeField] Transform enemyPos;
     [SerializeField] GameObject Bullet;
 
     Transform spawnBullet;
+
     void Start()
     {
         spawnBullet = this.gameObject.transform.GetChild(0);
@@ -17,9 +19,10 @@ public class EnemyShoot2 : MonoBehaviour
 
     IEnumerator SpawnManager()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(SpawnBullet());
     }
+
     IEnumerator SpawnBullet()
     {
         yield return new WaitForSeconds(0);
