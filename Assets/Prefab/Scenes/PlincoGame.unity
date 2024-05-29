@@ -3926,7 +3926,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26398d74f29e2cb409dcc2fdda2c41b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 615441e47eb68414a90a6b8df31c995a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.45
   m_Pitch: 1
@@ -7083,6 +7083,7 @@ MonoBehaviour:
   coins: {fileID: 700357618}
   viscacha: {fileID: 1407779275}
   score: 0
+  highscore: 0
   scoretext: {fileID: 553451690}
 --- !u!4 &700357617
 Transform:
