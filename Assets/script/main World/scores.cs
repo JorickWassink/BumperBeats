@@ -54,8 +54,8 @@ public class scores : MonoBehaviour
         }
         if(rythemText != null)
         {
-            rythemText.text = PlayerPrefs.GetInt("RhythRicoTempScore").ToString();
-            rythemscore = PlayerPrefs.GetInt("RhythRicoTempScore");
+            rythemText.text = PlayerPrefs.GetInt("RhythRicoHighScore").ToString();
+            rythemscore = PlayerPrefs.GetInt("RhythRicoHighScore");
             if(rythemscore > 5000)
             {
                 rythemviscacha.SetActive (true);
