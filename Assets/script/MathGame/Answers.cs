@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Answers : MonoBehaviour
 {
-    [SerializeField] coins Coins;
+    [SerializeField] coins Coins; // maakt een private var aan die je een waarde kan geven in de inspector
     public int index;
     MathGame game;
     MathPlayer player;
@@ -21,12 +21,12 @@ public class Answers : MonoBehaviour
         {
             if (game.whichOne == 1)
             {
-                objectD = GameObject.Find("A");
-                Invoke("BackToMenu", 2);
+                objectD = GameObject.Find("A"); // geeft de waarde van de gameobject met de aangegeven naam
+                Invoke("BackToMenu", 2); // runt de method BackToMenu na 2 seconden
                 
-                game.somText.text = "Goed!";
+                game.somText.text = "Goed!"; // veranderdt de text van het text object
                 player.canShoot = false;
-                Coins.addcoin();
+                Coins.addcoin(); // runt een method uit een gelinked script
             }
             else
             {
@@ -93,10 +93,9 @@ public class Answers : MonoBehaviour
                 Invoke("BackToMenu", 2);
             }
             print("D");
-            //asfgbwgia
         }
     }
-    private void BackToMenu()
+    private void BackToMenu() // maakt een nieuwe private method aan die niet gebruikt kan worden buiten dit script
     {
         SceneManager.LoadScene("GameOver");
     }

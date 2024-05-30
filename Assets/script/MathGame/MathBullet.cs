@@ -14,6 +14,6 @@ public class MathBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(target.transform.position,ForceMode2D.Impulse);
+        rb.AddForce(target.transform.position,ForceMode2D.Impulse); // geeft het object force richting de positie van een object
     }
 } 

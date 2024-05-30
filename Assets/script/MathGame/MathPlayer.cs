@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MathPlayer : MonoBehaviour
 {
-    Vector2 moveDirection;
     [SerializeField] float rotationSpeed = 100f;
     [SerializeField] GameObject bullet;
     public Transform bulletStart;
@@ -17,18 +16,17 @@ public class MathPlayer : MonoBehaviour
     }
     void Update()
     {
-        float rotate = Input.GetAxis("Horizontal");        
-        transform.Rotate(new Vector3(0, 0, -1) * rotate * Time.deltaTime * rotationSpeed);
+        float rotate = Input.GetAxis("Horizontal"); // geeft de float een waarde van de horizontale input        
+        transform.Rotate(new Vector3(0, 0, -1) * rotate * Time.deltaTime * rotationSpeed); //rotate het object 
 
-        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
+        if (Input.GetKeyDown(KeyCode.Space) && canShoot) // als de spatiebalk op het toetsenbord naar beneden gedrukt is en de andere conditie ook klopt run dan de code
         {
-           Instantiate(bullet,bulletStart.position,Quaternion.identity);
+           Instantiate(bullet,bulletStart.position,Quaternion.identity); // spawnt een bullet op een specifieke positie
         }
     }
     private void FixedUpdate()
     {
-       line.SetPosition(0,bulletStart.position);
-       line.SetPosition(1,bulletEnd.position);
-        //bosigbloagss
+       line.SetPosition(0,bulletStart.position); // zet het begin van de linderenderer op een positie
+       line.SetPosition(1,bulletEnd.position); // zet de 2de positie van de linerenderer op een positie
     }
 }
